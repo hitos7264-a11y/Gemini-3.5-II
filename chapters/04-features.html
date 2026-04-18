@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="第4章：Gemini 3.5で期待される機能。Deep Think標準搭載、フルスタック生成、マルチモーダル統合の姿。">
+<title>第4章：期待される機能 | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>CHAPTER 04</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="../pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="../pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="../pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="../pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="../pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><a href="03-codenames.html">第3章</a><span class="sep">›</span><span>第4章</span></nav>
+        <div class="article__chapter-num">CHAPTER 04</div>
+        <h1 class="article__title">期待される機能<br><span class="text-accent" style="font-size:.65em;">— DeepThink標準搭載と「フルスタック創造機」</span></h1>
+
+        <p class="article__lead">
+            3.5で最も確度の高い予想は、<strong>Deep Thinkモードの「完全な標準搭載」</strong>である。そしてもうひとつ、一ショットでフルスタックのアプリを吐き出す<strong>「創造機」としての性格</strong>がさらに強まる——Snow Bunnyのデモが指し示す未来を読む。
+        </p>
+
+        <div class="article__meta">
+            <span class="article__meta-item">📖 約 6 分</span>
+            <span class="article__meta-item">🎯 機能予想</span>
+            <span class="article__meta-item">🟢 高確度</span>
+        </div>
+
+        <div class="article__body">
+            <h2>Deep Think の「完全な標準搭載」</h2>
+
+            <p>3.5で最も確度の高い予想は、<strong>Deep Thinkモードの「完全な標準搭載」</strong>である。Gemini 3 Deep Thinkは当初、特殊なリサーチラボ系の上位モード（AI Ultraプラン限定）として登場し、次のようなスコアを叩き出していた。</p>
+
+            <div class="stats-row">
+                <div class="stat-item stat-item--good">
+                    <div class="stat-item__label">ARC‑AGI‑2 (3 Deep Think)</div>
+                    <div class="stat-item__value">45.1%</div>
+                    <div class="stat-item__hint">3 Proコアの31.1%を大きく上回る</div>
+                </div>
+                <div class="stat-item stat-item--good">
+                    <div class="stat-item__label">HLE (3 Deep Think)</div>
+                    <div class="stat-item__value">41%+</div>
+                    <div class="stat-item__hint">Humanity's Last Exam</div>
+                </div>
+                <div class="stat-item stat-item--good">
+                    <div class="stat-item__label">GPQA Diamond</div>
+                    <div class="stat-item__value">93.8%</div>
+                    <div class="stat-item__hint">博士レベル科学QA</div>
+                </div>
+            </div>
+
+            <p>Gemini 3.1 Proでは、その思考プロセスを縮小版として<em>「Deep Think Mini」的に統合</em>し、Highティアに振るだけで数分単位のチェーン思考を回せるようにしたのが最大の進化だった。Gemini 3.5では、<strong>このHighティアがデフォルトでさらに長く、深くなり、現在の3.1のMediumが3.5のLowに対応する</strong>、というように全体が一段ずつ上にシフトするシナリオが自然である。</p>
+
+            <div class="callout callout--info">
+                <div class="callout__head"><span class="callout__icon">🧠</span>Thinking Budget の統一</div>
+                <p>Robotics‑ER 1.6 で導入された<b>「柔軟なthinking budget」</b>というパラメータは、3.5本体の思考量パラメータと共通化されると予想される。つまり「ロボットの手先でも、ブラウザの画面でも、<b>同じ思考の深さで動く</b>」という形で統一される可能性が高い。</p>
+            </div>
+
+            <h2>一ショットでのフルスタック生成</h2>
+
+            <p>機能面でもうひとつ確度が高いのは、<strong>「一ショットでのフルスタック生成能力」の飛躍的強化</strong>だ。Snow Bunnyチェックポイントで話題になったのは、単一のプロンプトから<em>Game Boyエミュレータ相当のコードを3000行以上一気に書き切り、そのままブラウザで動作するデモを生成</em>したという事例である。</p>
+
+            <div class="fact-highlight">
+                <div class="fact-highlight__big">3000+</div>
+                <div class="fact-highlight__label">行のコードを単一プロンプトで</div>
+                <div class="fact-highlight__note">Snow Bunnyチェックポイントの代表的デモ。ブラウザで実際に動作するGame Boyエミュレータ相当を一発生成。</div>
+            </div>
+
+            <h3>既に3.1 Pro公式ブログで披露されているデモ群</h3>
+
+            <p>同様に、以下のような「アプリケーション設計書+UI+ロジック+実装」が同時に降ってくるタイプのデモが、3.1 Proの時点から公式ブログに掲載されている。</p>
+
+            <ul>
+                <li>一発で自律走行する<strong>椋鳥3D群衆シミュレーション</strong>（Starling Murmuration）</li>
+                <li>手のトラッキングで操作できる<strong>インタラクティブな生成スコア付き3Dアート</strong></li>
+                <li>国際宇宙ステーション（ISS）のテレメトリストリームを自動配線した<strong>航空宇宙ダッシュボード</strong></li>
+                <li>『嵐が丘』をテーマにした<strong>文学ポートフォリオ生成</strong></li>
+            </ul>
+
+            <p>3.5ではこれをさらに<strong>大規模・多モーダル・長期実行</strong>に押し広げ、<em>Google Antigravity</em>のエージェンティック開発環境と深く統合された形で提供される公算が高い。</p>
+
+            <div class="pull-quote">
+                I/Oのステージで「3.5ならChromeブラウザ拡張をゼロから一時間で作らせる」といった実演が行われ、その動画がそのままVeo経由で自動録画・編集される——「Gemini 3.5 × Antigravity × Veo 4 × Lyria 3」の合わせ技ショーケースが用意されるだろう。
+                <cite>— 本稿の読み筋</cite>
+            </div>
+
+            <h2>マルチモーダル・オーケストレーション</h2>
+
+            <p>音声・動画・ロボティクスとの統合も見逃せない。この揃い方は偶然ではない。</p>
+
+            <div class="lineup-grid">
+                <div class="lineup-card lineup-card--live">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Gemini 3.1 Flash Live</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">3月26日</span>
+                    </div>
+                    <p class="lineup-card__desc">リアルタイム音声対話。会話中の割り込みや感情表現も扱える。</p>
+                </div>
+                <div class="lineup-card lineup-card--tts">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Gemini 3.1 Flash TTS</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">4月15日</span>
+                    </div>
+                    <p class="lineup-card__desc">70+言語の感情・ペース・アクセントをオーディオタグで細かく制御。SynthID透かし。</p>
+                </div>
+                <div class="lineup-card lineup-card--flash">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Veo 3.1 Lite</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">3月31日</span>
+                    </div>
+                    <p class="lineup-card__desc">動画生成の軽量版。短尺の高品質動画をリアルタイムに近い速度で。</p>
+                </div>
+                <div class="lineup-card lineup-card--deep">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Lyria 3 Pro</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">3月25日</span>
+                    </div>
+                    <p class="lineup-card__desc">音楽生成モデルのPro版。BGMから完奏曲まで。</p>
+                </div>
+                <div class="lineup-card lineup-card--lite">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Robotics‑ER 1.6</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">4月14日</span>
+                    </div>
+                    <p class="lineup-card__desc">身体化推論。空間・多視点・計器読解を強化。柔軟なthinking budget。</p>
+                </div>
+            </div>
+
+            <p>3.5本体を<strong>マスター・オーケストレーター</strong>として、これらのサブモデル群を呼び分けながらエージェンティックに振る舞わせる——いわゆる<em>「Gemini 3.5 Agent」</em>という統合インターフェースが、I/Oのキーワードになる可能性が極めて高い。</p>
+
+            <h2>予想される新機能のまとめ</h2>
+
+            <div class="callout callout--success">
+                <div class="callout__head"><span class="callout__icon">✓</span>3.5 新機能の期待リスト</div>
+                <ul style="margin:6px 0 0;padding-left:20px;">
+                    <li><b>Deep Think 標準搭載</b>（現3.1のHigh相当がデフォルト）</li>
+                    <li><b>マルチエキスパート協調</b>（Fierce/Ghost Falcon相当の内部エキスパート）</li>
+                    <li><b>3000〜5000行のコードを一ショット</b>生成</li>
+                    <li><b>動画入力からコード生成</b>（ビデオ→アプリ）</li>
+                    <li><b>Robotics‑ERと同一APIで空間推論</b>が呼べる</li>
+                    <li><b>SynthID透かしの動画・音声・画像への全面適用</b></li>
+                    <li><b>Antigravity連携</b>によるエージェンティック・コーディング環境</li>
+                </ul>
+            </div>
+
+            <div class="confidence" data-conf="80">
+                <div class="confidence__head">
+                    <span class="confidence__label">🎯 Deep Think 標準搭載の確信度</span>
+                    <span class="confidence__pct">80%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--high"></div></div>
+            </div>
+            <div class="confidence" data-conf="68">
+                <div class="confidence__head">
+                    <span class="confidence__label">🎯 フルスタック一ショット生成の確信度</span>
+                    <span class="confidence__pct">68%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--mid"></div></div>
+            </div>
+            <div class="confidence" data-conf="60">
+                <div class="confidence__head">
+                    <span class="confidence__label">🎯 マルチエキスパート協調アーキテクチャの確信度</span>
+                    <span class="confidence__pct">60%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--mid"></div></div>
+            </div>
+        </div>
+
+        <div class="chapter-nav">
+            <a class="chapter-nav__link chapter-nav__link--prev" href="03-codenames.html">
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">← PREV</div><div class="chapter-nav__t">第3章：Snow Bunnyと2つの猛禽</div></div>
+            </a>
+            <a class="chapter-nav__link chapter-nav__link--next" href="05-benchmarks.html">
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">NEXT →</div><div class="chapter-nav__t">第5章：ベンチマーク予想</div></div>
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="00-prologue.html">序章</a><a href="02-release.html">時期予想</a><a href="05-benchmarks.html">ベンチマーク</a><a href="12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="../pages/timeline.html">タイムライン</a><a href="../pages/lineup.html">モデル一覧</a><a href="../pages/glossary.html">用語集</a><a href="../pages/sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="../pages/about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="第3章：Gemini 3.5のコードネーム層構造。Snow Bunny、Fierce Falcon、Ghost Falconの正体と、2つの対立仮説を整理する。">
+<title>第3章：Snow Bunnyと2つの猛禽 | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>CHAPTER 03</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="../pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="../pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="../pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="../pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="../pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><a href="02-release.html">第2章</a><span class="sep">›</span><span>第3章</span></nav>
+        <div class="article__chapter-num">CHAPTER 03</div>
+        <h1 class="article__title">コードネーム「Snow Bunny」と<br><span class="text-accent" style="font-size:.65em;">2つの猛禽 — Fierce/Ghost Falconの正体</span></h1>
+
+        <p class="article__lead">
+            Gemini 3.5の姿を読み解くうえで、いまいちばん面白いのが<strong>コードネームの層構造</strong>だ。Snow Bunnyは発端、そして鷹たち（Fierce Falcon / Ghost Falcon）がそのサブ・エキスパートとして姿を現している——これが真実なのか、それとも勘違いか。
+        </p>
+
+        <div class="article__meta">
+            <span class="article__meta-item">📖 約 6 分</span>
+            <span class="article__meta-item">🎯 コードネーム解析</span>
+            <span class="article__meta-item">🟡 中確度（未検証含む）</span>
+        </div>
+
+        <div class="article__body">
+            <h2>Snow Bunny の発端</h2>
+
+            <p>発端は2025年12月〜2026年1月にかけて、<strong>Google AI Studioの内部パラメータやLM Arenaの匿名プール</strong>から「Snow Bunny」もしくは「Snowbunny」という識別子が観測されたこと。開発者コミュニティはこれを<em>Gemini 3.5の初期チェックポイント</em>と見なし、いくつかの驚異的なデモが拡散して話題になった。</p>
+
+            <div class="callout callout--info">
+                <div class="callout__head"><span class="callout__icon">🐰</span>Snow Bunny の象徴的デモ</div>
+                <ul style="margin:6px 0 0;padding-left:20px;">
+                    <li>単一プロンプトで<b>Game Boyエミュレータ相当</b>のコードを3000行以上生成</li>
+                    <li>一ショットでフルスタックWebアプリを構築</li>
+                    <li>複雑なUI設計書と実装コードを同時に吐き出す</li>
+                </ul>
+            </div>
+
+            <h2>2つの猛禽：Fierce Falcon と Ghost Falcon</h2>
+
+            <p>さらに、それと前後して<strong>「Fierce Falcon」</strong>と<strong>「Ghost Falcon」</strong>という2つの名前がLM Arena（通称<em>LaMarina</em>）のブラインドバトルに姿を見せるようになった。これについてはやや解釈が分かれている。</p>
+
+            <div class="split-row">
+                <div class="split-cell">
+                    <h4>🦅 Fierce Falcon</h4>
+                    <p>精密さ・論理・<strong>コーディング重視</strong>。Windows/MacOSのコーディング・シミュレーション環境を模倣した事例が紹介されている。</p>
+                </div>
+                <div class="split-cell">
+                    <h4>👻 Ghost Falcon</h4>
+                    <p>創造性・ビジュアル・<strong>デザイン重視</strong>。簡易なチェスゲームやポーカーアプリを一発で構築、SVG生成も得意とされる。</p>
+                </div>
+            </div>
+
+            <h2>対立する解釈</h2>
+
+            <p>これら2つの猛禽が「何の正体なのか」については、コミュニティ内で解釈が分かれている。</p>
+
+            <div class="scenario-grid">
+                <div class="scenario-card scenario-card--main">
+                    <span class="scenario-card__tag">仮説 A</span>
+                    <h3 class="scenario-card__name">Gemini 3.5 の特化サブモデル説</h3>
+                    <p class="scenario-card__body">
+                        Julian Goldie系のリークブログや Geeky‑Gadgets は、Fierce/Ghost Falconを<b>Gemini 3.5シリーズの特化モデル</b>と解釈。Fierce=論理・コード、Ghost=創造・ビジュアルで役割分担を担うとする。
+                    </p>
+                    <div class="scenario-card__prob"><span>主張メディア</span><span class="scenario-card__prob-val">Goldie系</span></div>
+                </div>
+                <div class="scenario-card scenario-card--alt1">
+                    <span class="scenario-card__tag">仮説 B</span>
+                    <h3 class="scenario-card__name">Gemini 3 系列 GAチェックポイント説</h3>
+                    <p class="scenario-card__body">
+                        <b>Ghostfalcon.org</b> のような追跡サイトは、Ghost Falconはもともと2025年12月時点の観測であり、「Gemini 3 Flash」や「Gemini 3 ProのGAチェックポイント」に相当するテストモデルだったと位置づけている。
+                    </p>
+                    <div class="scenario-card__prob"><span>主張メディア</span><span class="scenario-card__prob-val">Ghostfalcon.org</span></div>
+                </div>
+            </div>
+
+            <h2>本稿の統合的な読み</h2>
+
+            <p>これらを統合すると、Gemini 3.5は単一の巨大モデルという形ではなく、<strong>「Snow Bunny」という上位ブランドの下に、推論・コーディングに強いFierce Falconと、創造・設計に強いGhost Falconがサブモデルとして配置され、タスクによってルーティングしたり協調させたりする「マルチモデル・コラボレーション」を前面に出してくる</strong>可能性が高い。</p>
+
+            <div class="pull-quote">
+                3.1 Proで導入されたスリーティア・シンキング（Low/Medium/High）はあくまで「ひとつのモデルが思考量を変える」発想だったが、3.5では「モデル自体が役割を変える」という方向に一歩踏み込むのではないか。
+                <cite>— 2026年4月時点の有力な読み筋</cite>
+            </div>
+
+            <h2>内部コード名の観測例</h2>
+
+            <p>Community.aifire.co などの追跡記事では、Snow Bunnyと同時期に<code>DN9</code>、<code>D13</code>といった内部コード表記も観測されている。これらがFierce/Ghost Falconと同一か別物かは現時点では不明だが、いずれも短期間で姿を消したり戻ったりするLM Arena特有の「ステルス投入」挙動を示している。</p>
+
+            <div class="chip-row">
+                <span class="chip chip--blue">Snow Bunny</span>
+                <span class="chip chip--blue">Snowbunny</span>
+                <span class="chip chip--purple">Fierce Falcon</span>
+                <span class="chip chip--purple">Ghost Falcon</span>
+                <span class="chip">DN9</span>
+                <span class="chip">D13</span>
+                <span class="chip chip--gold">OrionMist</span>
+                <span class="chip chip--gold">LithiumFlow</span>
+            </div>
+
+            <p>ちなみに<em>OrionMist</em>と<em>LithiumFlow</em>は、X上の@mark_k氏らによれば「Gemini 3 Proのステルス版」として2025年10月〜11月に観測されたもので、最終的にGemini 3 Proとして正式リリースされた。この前例からも、<strong>Googleがコード名を多用しながらLM Arenaでのステルステストを行うパターン</strong>が確立しているのは明らかだ。</p>
+
+            <h2>マルチエキスパート型モデルという方向性</h2>
+
+            <p>技術的に見ても、最近のフロンティアモデルは<em>MoE（Mixture of Experts）</em>をさらに発展させた「タスク別エキスパートのルーティング」が主流になりつつある。OpenAIのo1/GPT-5系列でも内部的には用途別のエキスパートが動いているとされ、Anthropicも同様のアーキテクチャを示唆している。Gemini 3.5が「Snow Bunny as orchestrator + Fierce/Ghost as experts」という形を取るのは、アーキテクチャ的にも時代の流れに合致する。</p>
+
+            <div class="callout callout--note">
+                <div class="callout__head"><span class="callout__icon">✎</span>留意点</div>
+                <p>Ghostfalcon.orgの主張にも一理あるため、Fierce/Ghost Falconが最終的にGemini 3.1系列の別バリアント（例：gemini-3-flash-think、gemini-3-pro-thinking）として姿を現す可能性も排除できない。「コードネーム=次期モデル」と断定するのは早計。</p>
+            </div>
+
+            <div class="confidence" data-conf="55">
+                <div class="confidence__head">
+                    <span class="confidence__label">🎯 「Fierce/Ghost = 3.5サブモデル」説の確信度</span>
+                    <span class="confidence__pct">55%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--mid"></div></div>
+            </div>
+        </div>
+
+        <div class="chapter-nav">
+            <a class="chapter-nav__link chapter-nav__link--prev" href="02-release.html">
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">← PREV</div><div class="chapter-nav__t">第2章：リリース時期予想</div></div>
+            </a>
+            <a class="chapter-nav__link chapter-nav__link--next" href="04-features.html">
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">NEXT →</div><div class="chapter-nav__t">第4章：期待される機能</div></div>
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="00-prologue.html">序章</a><a href="02-release.html">時期予想</a><a href="05-benchmarks.html">ベンチマーク</a><a href="12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="../pages/timeline.html">タイムライン</a><a href="../pages/lineup.html">モデル一覧</a><a href="../pages/glossary.html">用語集</a><a href="../pages/sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="../pages/about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

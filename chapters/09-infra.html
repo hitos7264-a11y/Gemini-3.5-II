@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="第9章：Gemini 3.5を支える基盤インフラ。Ironwood TPU (TPUv7)、9216チップ、42.5 ExaFLOPSの垂直統合アーキテクチャ。">
+<title>第9章：Ironwood TPUが支える垂直統合 | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>CHAPTER 09</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="../pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="../pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="../pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="../pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="../pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><a href="08-competition.html">第8章</a><span class="sep">›</span><span>第9章</span></nav>
+        <div class="article__chapter-num">CHAPTER 09</div>
+        <h1 class="article__title">基盤インフラ<br><span class="text-accent" style="font-size:.65em;">— Ironwood TPU が支える垂直統合</span></h1>
+
+        <p class="article__lead">
+            Gemini 3.5の裏側で最も象徴的な要素が、<strong>Ironwood TPU（TPUv7）</strong>である。Gemini 3は「100% TPUで学習した」と公表されており、<em>Nvidia GPUを一切使っていない</em>のが特徴。これは単なる自慢ではなく、訓練〜推論までGoogleが自社シリコンで完結させる<strong>戦略的意義</strong>を持つ。
+        </p>
+
+        <div class="article__meta">
+            <span class="article__meta-item">📖 約 5 分</span>
+            <span class="article__meta-item">🎯 インフラ</span>
+            <span class="article__meta-item">🟢 高確度（公式公開情報）</span>
+        </div>
+
+        <div class="article__body">
+            <h2>Ironwood TPU (TPUv7) のスペック</h2>
+
+            <p>Ironwoodは、推論特化設計の<strong>第7世代TPU</strong>で、次のような圧倒的スペックを誇る。</p>
+
+            <div class="stats-row">
+                <div class="stat-item stat-item--accent">
+                    <div class="stat-item__label">1ポッドあたり</div>
+                    <div class="stat-item__value">9216</div>
+                    <div class="stat-item__hint">チップ</div>
+                </div>
+                <div class="stat-item stat-item--accent">
+                    <div class="stat-item__label">ポッド総性能</div>
+                    <div class="stat-item__value">42.5</div>
+                    <div class="stat-item__hint">ExaFLOPS (FP8)</div>
+                </div>
+                <div class="stat-item stat-item--accent">
+                    <div class="stat-item__label">vs TPU v5</div>
+                    <div class="stat-item__value">10x</div>
+                    <div class="stat-item__hint">ピーク性能</div>
+                </div>
+                <div class="stat-item stat-item--accent">
+                    <div class="stat-item__label">ワット性能</div>
+                    <div class="stat-item__value">4x</div>
+                    <div class="stat-item__hint">電力効率</div>
+                </div>
+            </div>
+
+            <p>各ホスト<strong>4チップ</strong>、1ラック<strong>64チップ</strong>の「キューブ」が基本単位で、そのキューブを多数束ねてハイパーコンピュータを構成する。</p>
+
+            <h2>戦略的意義：Nvidia非依存</h2>
+
+            <p>Gemini 3は「<strong>100% TPU上で学習した</strong>」と公表されており、Nvidia GPUを一切使っていないのが特徴。これは単なる自慢ではなく、訓練〜推論までGoogleが自社シリコンで完結させることで、以下の戦略的意義を持つ。</p>
+
+            <ul>
+                <li><strong>推論コストの低減</strong>——他社がNvidiaに支払うマージンが不要</li>
+                <li><strong>低遅延</strong>——Google Cloud全体のネットワークと最適化された統合</li>
+                <li><strong>カスタム最適化</strong>——Transformerワークロードに特化したメモリ階層</li>
+                <li><strong>供給制約からの独立性</strong>——Nvidia H200やB200の入手難の影響を受けない</li>
+            </ul>
+
+            <div class="pull-quote">
+                これは単に技術自慢ではなく、<b>「最も安く、最も速く、最も多機能な最上位モデル」</b>という3つの属性を同時に押さえにいく、Googleの垂直統合戦略の集大成になる。
+                <cite>— 本稿の読み筋</cite>
+            </div>
+
+            <h2>3系統のTPUファミリー</h2>
+
+            <p>さらにGoogleは、TPU v5の<em>Sunfish</em>系、推論特化の<em>Zebrafish</em>系という3系統のTPUファミリーを並列に展開しており、Gemini 3.5の大規模学習にはIronwoodが主力、量産推論にはSunfish・Zebrafishが補助的に使われる、といった<strong>多層アーキテクチャ</strong>が予想される。</p>
+
+            <div class="lineup-grid">
+                <div class="lineup-card lineup-card--flash">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Ironwood (TPUv7)</div>
+                        <span class="lineup-card__badge lineup-card__badge--flagship">主力</span>
+                    </div>
+                    <p class="lineup-card__desc">大規模学習と高性能推論の中核。9216チップ×ポッド、42.5 ExaFLOPS。</p>
+                </div>
+                <div class="lineup-card lineup-card--live">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Sunfish 系</div>
+                        <span class="lineup-card__badge">補助</span>
+                    </div>
+                    <p class="lineup-card__desc">TPU v5ベース。広域の量産推論ワークロードを支える。</p>
+                </div>
+                <div class="lineup-card lineup-card--tts">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Zebrafish 系</div>
+                        <span class="lineup-card__badge">補助</span>
+                    </div>
+                    <p class="lineup-card__desc">推論特化設計。レイテンシ重視のリアルタイム応答向け。</p>
+                </div>
+            </div>
+
+            <h2>AI Hypercomputer：Axion CPU との合わせ技</h2>
+
+            <p>Ironwoodは単独では成り立たない。Googleが並行開発している<strong>Axion CPU（Arm系）</strong>との組み合わせで成立する<em>「AI Hypercomputer」</em>の全体像も、Google I/Oのキーノートで必ず前景化される。Demis Hassabisは必ずこの点に言及するはずだし、Sundar Pichaiもエコシステム戦略として強調するだろう。</p>
+
+            <div class="callout callout--info">
+                <div class="callout__head"><span class="callout__icon">🏗️</span>AI Hypercomputer の3層</div>
+                <ul style="margin:6px 0 0;padding-left:20px;">
+                    <li><b>Layer 1: シリコン</b> — Ironwood TPU + Axion CPU + カスタムInterconnect</li>
+                    <li><b>Layer 2: ソフトウェア</b> — JAX, Pathways, vLLM-on-TPU, カスタムXLA</li>
+                    <li><b>Layer 3: アプリケーション</b> — Gemini 3.5 + Veo 4 + Lyria 3 + Robotics‑ER 2.0</li>
+                </ul>
+            </div>
+
+            <h2>推論コストに対する直接効果</h2>
+
+            <p>このインフラ的な強みは、<strong>同じモデル規模でも「他社より安く、速く、電力効率よく」提供できる</strong>、という形で3.5の価格・遅延・可用性に直接効いてくる。</p>
+
+            <p>具体的には、OpenAIがMicrosoft Azure経由でNvidia GPUを借りるコスト構造と比較して、Googleは<em>推論1トークンあたりのコストで数十%のマージンを得られる</em>。これがFlash系の$0.10/Mという価格設定を可能にしている基盤であり、3.5でもこの優位性は継続する。</p>
+
+            <div class="fact-highlight">
+                <div class="fact-highlight__big">42.5<span style="font-size:18px;vertical-align:middle;color:var(--text-2);"> ExaFLOPS</span></div>
+                <div class="fact-highlight__label">Ironwood 1ポッドのFP8性能</div>
+                <div class="fact-highlight__note">Nvidia GB300 NVL72 をベースにした典型的なポッドと比較しても大きなアドバンテージ。Google Cloud Blog と Tom's Hardware の報道より。</div>
+            </div>
+
+            <h2>Gemini 3.5 時代の TPU 需要予測</h2>
+
+            <p>Gemini 3.5が2Mトークンの長文を日常的に扱い、Deep Thinkで数分単位の長考をすれば、当然のことながら<strong>1リクエストあたりのTPU消費量は増大</strong>する。しかしIronwoodの10倍のピーク性能と4倍のワット性能があれば、これは既存インフラで十分に吸収できる。加えてGoogleは2026年を通じてデータセンター拡張を続けており、3.5のスケーラビリティは問題にならない見通し。</p>
+
+            <div class="confidence" data-conf="92">
+                <div class="confidence__head">
+                    <span class="confidence__label">🎯 Ironwood による Gemini 3.5 学習・推論の確信度</span>
+                    <span class="confidence__pct">92%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--high"></div></div>
+            </div>
+        </div>
+
+        <div class="chapter-nav">
+            <a class="chapter-nav__link chapter-nav__link--prev" href="08-competition.html">
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">← PREV</div><div class="chapter-nav__t">第8章：競合状況</div></div>
+            </a>
+            <a class="chapter-nav__link chapter-nav__link--next" href="10-naming.html">
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">NEXT →</div><div class="chapter-nav__t">第10章：ネーミング戦略の謎</div></div>
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="00-prologue.html">序章</a><a href="02-release.html">時期予想</a><a href="05-benchmarks.html">ベンチマーク</a><a href="12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="../pages/timeline.html">タイムライン</a><a href="../pages/lineup.html">モデル一覧</a><a href="../pages/glossary.html">用語集</a><a href="../pages/sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="../pages/about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

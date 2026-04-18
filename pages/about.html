@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="このGemini 3.5大予想サイトの執筆方針、確信度のスケール、免責事項について。">
+<title>この予想について | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>ABOUT</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="../chapters/00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="../chapters/01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="../chapters/02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="../chapters/03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="../chapters/04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="../chapters/05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../chapters/06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="../chapters/07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="../chapters/08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="../chapters/09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="../chapters/10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="../chapters/11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="../chapters/12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><span>この予想について</span></nav>
+        <div class="article__chapter-num">ABOUT</div>
+        <h1 class="article__title">この予想に<br><span class="text-accent">ついて</span></h1>
+
+        <p class="article__lead">
+            本サイト <strong>「Gemini 3.5 大予想 — 2026年4月18日」</strong> の執筆方針、確信度のスケール、情報源の取り扱い、そして免責事項について。
+        </p>
+
+        <div class="article__body">
+            <h2>サイトの目的</h2>
+
+            <p>2026年5月19-20日のGoogle I/O 2026を目前に控えた<strong>「嵐の前の静けさ」</strong>——この奇妙に静かな時点で、Google次世代AIモデル「Gemini 3.5（コードネーム Snow Bunny）」が<em>どのようなモデルになるか</em>を、できる限り誠実に推測すること。そして予想が当たるか外れるか以上に、<strong>予想の根拠を透明にし、確信度を明示すること</strong>を優先する姿勢でまとめています。</p>
+
+            <h2>確信度の3段階</h2>
+
+            <p>本サイトの各予想には、多くの場合<strong>確信度バー</strong>が付与されています。意味は次のとおり。</p>
+
+            <div class="split-row">
+                <div class="split-cell split-cell--pro">
+                    <h4>🟢 高確度（70%以上）</h4>
+                    <p>公式1次情報（Google/DeepMindの公式発表）、または予測市場の厚い値段、あるいは複数の独立ソースが整合する情報をもとにした予測。</p>
+                </div>
+                <div class="split-cell">
+                    <h4>🟡 中確度（40〜70%）</h4>
+                    <p>技術メディアの集計や、複数の独立リークが指し示す方向。一次ソースはないが、整合的なパターンがある情報。</p>
+                </div>
+                <div class="split-cell split-cell--con">
+                    <h4>🔴 低確度（40%未満）</h4>
+                    <p>未検証の速報リーク、単発のデモ、個人ブログの推測。「話半分」で受け止めるべき情報。本稿ではこれらを必ず注記付きで扱う。</p>
+                </div>
+            </div>
+
+            <h2>情報源の7層</h2>
+
+            <p>本稿の情報源は<a href="sources.html">参照情報源一覧</a>にまとめてあり、以下の7層に分類しています。</p>
+
+            <div class="pc-list pc-list--pro">
+                <li><b>層1：公式</b> — Google / DeepMindの公式発表、Model Card、API Changelog</li>
+                <li><b>層2：予測市場</b> — Polymarket / Manifold Markets</li>
+                <li><b>層3：リーク系メディア</b> — Julian Goldie SEO、Geeky Gadgets、Daniel Norin等</li>
+                <li><b>層4：技術分析メディア</b> — VentureBeat、DataCamp、Vellum、BenchLM等</li>
+                <li><b>層5：経営層発言</b> — Demis Hassabis氏のFortune等インタビュー</li>
+                <li><b>層6：コミュニティ観測</b> — Reddit r/Bard、r/singularity、X投稿等</li>
+                <li><b>層7：動画コンテンツ</b> — YouTubeリーク解説・予想動画</li>
+            </div>
+
+            <h2>本稿の構成</h2>
+
+            <p>本編は<strong>12章</strong>構成です。</p>
+
+            <div class="cmp-table">
+                <div class="cmp-row cmp-row--head"><div class="cmp-label">章</div><div class="cmp-val">テーマ</div></div>
+                <div class="cmp-row"><div class="cmp-label">序章</div><div class="cmp-val">導入</div></div>
+                <div class="cmp-row"><div class="cmp-label">第1章</div><div class="cmp-val">現状整理</div></div>
+                <div class="cmp-row"><div class="cmp-label">第2章</div><div class="cmp-val">リリース時期</div></div>
+                <div class="cmp-row"><div class="cmp-label">第3章</div><div class="cmp-val">コードネーム</div></div>
+                <div class="cmp-row"><div class="cmp-label">第4章</div><div class="cmp-val">機能予想</div></div>
+                <div class="cmp-row"><div class="cmp-label">第5章</div><div class="cmp-val">ベンチマーク</div></div>
+                <div class="cmp-row"><div class="cmp-label">第6章</div><div class="cmp-val">コンテキスト</div></div>
+                <div class="cmp-row"><div class="cmp-label">第7章</div><div class="cmp-val">価格・配信</div></div>
+                <div class="cmp-row"><div class="cmp-label">第8章</div><div class="cmp-val">競合状況</div></div>
+                <div class="cmp-row"><div class="cmp-label">第9章</div><div class="cmp-val">インフラ</div></div>
+                <div class="cmp-row"><div class="cmp-label">第10章</div><div class="cmp-val">ネーミング</div></div>
+                <div class="cmp-row"><div class="cmp-label">第11章</div><div class="cmp-val">リスク</div></div>
+                <div class="cmp-row"><div class="cmp-label">第12章</div><div class="cmp-val">総合評価</div></div>
+            </div>
+
+            <p>加えて、<a href="timeline.html">タイムライン</a>、<a href="lineup.html">モデルラインナップ</a>、<a href="benchmarks-dashboard.html">ベンチマーク比較</a>、<a href="glossary.html">用語集</a>、<a href="sources.html">情報源一覧</a>の5つの付録ページを用意しています。</p>
+
+            <h2>このサイトの技術</h2>
+
+            <div class="callout callout--info">
+                <div class="callout__head"><span class="callout__icon">⚙</span>サイト仕様</div>
+                <ul style="margin:6px 0 0;padding-left:20px;">
+                    <li><b>フレームワーク</b> — 素のHTML / CSS / JavaScript（フレームワーク非依存）</li>
+                    <li><b>UI</b> — スマートフォン特化・ダークテーマ・ガラスモーフィズム</li>
+                    <li><b>タイポグラフィ</b> — Noto Sans JP + JetBrains Mono</li>
+                    <li><b>機能</b> — ドロワーナビ、全文検索、読書進捗バー、スクロールアニメ、アコーディオンFAQ</li>
+                    <li><b>アクセシビリティ</b> — ARIA属性、<code>prefers-reduced-motion</code>対応</li>
+                </ul>
+            </div>
+
+            <h2>免責事項</h2>
+
+            <div class="callout callout--caution">
+                <div class="callout__head"><span class="callout__icon">⚠</span>重要</div>
+                <p>本サイトは<b>非公式の予想・分析</b>です。Google、Google DeepMind、Anthropic、OpenAI、xAIのいずれとも一切関係がありません。</p>
+                <p>記載内容の正確性を保証するものではなく、実際のGemini 3.5の仕様・リリース時期・性能はGoogleの公式発表に従ってください。</p>
+                <p>競合他社（GPT-5.x、Claude Opus 4.x、Grok 5等）についての推定値は、すべて第三者メディアの報道および個人の推測に基づくものです。</p>
+            </div>
+
+            <h2>執筆時点</h2>
+
+            <div class="fact-highlight">
+                <div class="fact-highlight__big">2026.04.18</div>
+                <div class="fact-highlight__label">本稿の情報カットオフ</div>
+                <div class="fact-highlight__note">この日付以降に公開された情報は、本サイトには反映されていません。Google I/O 2026当日（5月19-20日）以降は、本予想の答え合わせをする楽しみが待っています。</div>
+            </div>
+
+            <h2>もしこの予想が当たったら？ / 外れたら？</h2>
+
+            <p>2026年5月19-20日のGoogle I/O以降、本稿で示した予想と実際のGemini 3.5発表を比較することができます。当たっていれば嬉しいし、外れていれば<em>なぜ外れたのか</em>を分析する良い題材になります。いずれにしても、「嵐の前の静けさ」の時点で一度立ち止まって輪郭を描いておくことには、それ自体の価値があると信じています。</p>
+
+            <div class="pull-quote">
+                予想が当たるかどうかよりも、<b>予想の根拠を透明にしたかどうか</b>のほうが重要。
+                <cite>— 本稿の基本方針</cite>
+            </div>
+
+            <h2>謝辞</h2>
+
+            <p>本サイトの執筆にあたっては、<a href="sources.html">参照情報源一覧</a>に列挙した<strong>120件超</strong>のソースに多大なる恩恵を受けました。特に、Google/DeepMindの公式情報、Polymarket/Manifoldの予測市場参加者、Reddit r/Bardやr/singularityのコミュニティ、そしてDemis Hassabis氏をはじめとするGoogle経営層の率直な発言に感謝します。</p>
+
+            <h2>トップに戻る</h2>
+
+            <div class="section-link-row">
+                <a class="section-link" href="../index.html">
+                    <span class="section-link__icon">◆</span>
+                    <span class="section-link__text">トップページ</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="../chapters/00-prologue.html">
+                    <span class="section-link__icon">📖</span>
+                    <span class="section-link__text">序章から読み始める</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="../chapters/12-summary.html">
+                    <span class="section-link__icon">🎯</span>
+                    <span class="section-link__text">結論を読む</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="sources.html">
+                    <span class="section-link__icon">🔖</span>
+                    <span class="section-link__text">情報源一覧</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="../chapters/00-prologue.html">序章</a><a href="../chapters/02-release.html">時期予想</a><a href="../chapters/12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="timeline.html">タイムライン</a><a href="lineup.html">モデル一覧</a><a href="glossary.html">用語集</a><a href="sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

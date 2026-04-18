@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="Gemini 3.5 大予想 参照情報源一覧。公式・予測市場・リーク系・技術メディア・経営層発言・Reddit観測・YouTube動画 など120+件を7層で列挙。">
+<title>参照情報源一覧 | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>SOURCES</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="../chapters/00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="../chapters/01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="../chapters/02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="../chapters/03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="../chapters/04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="../chapters/05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../chapters/06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="../chapters/07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="../chapters/08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="../chapters/09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="../chapters/10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="../chapters/11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="../chapters/12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><span>参照情報源</span></nav>
+        <div class="article__chapter-num">APPENDIX · SOURCES</div>
+        <h1 class="article__title">参照情報源一覧<br><span class="text-accent" style="font-size:.65em;">— 120+件を7層で列挙</span></h1>
+
+        <p class="article__lead">
+            本サイトの執筆にあたって参照した情報源を、<strong>7層構造</strong>に分けて列挙します。公式1次情報→予測市場→リーク系メディア→技術分析→経営層発言→コミュニティ観測→動画の順。<em>高確度</em>の予測は主に層1〜2、<em>中確度</em>は層3〜4、<em>低確度</em>は層5以降を背景としています。
+        </p>
+
+        <div class="article__body">
+            <div class="stats-row">
+                <div class="stat-item stat-item--accent"><div class="stat-item__label">Total Sources</div><div class="stat-item__value">120+</div></div>
+                <div class="stat-item stat-item--accent"><div class="stat-item__label">層 (Layers)</div><div class="stat-item__value">7</div></div>
+                <div class="stat-item stat-item--accent"><div class="stat-item__label">調査日</div><div class="stat-item__value">04.18</div></div>
+            </div>
+
+            <!-- Layer 1 -->
+            <div class="source-group">
+                <div class="source-group__head">
+                    <div class="source-group__icon source-group__icon--official">🏢</div>
+                    <div class="source-group__info">
+                        <div class="source-group__title">層1：公式ソース ― Google / Google DeepMind</div>
+                        <div class="source-group__count">1次情報。最も確度の高い層</div>
+                    </div>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google DeepMind「Gemini 3.1 Pro Model Card」</div>
+                    <span class="source-item__url">https://deepmind.google/models/model-cards/gemini-3-1-pro/</span>
+                    <p class="source-item__note">2026年2月19日公開。Gemini 3.1 Proの公式ベンチマーク(HLE 44.4%、ARC-AGI-2 77.1%、GPQA Diamond 94.3%、SWE-Bench Verified 80.6%、LiveCodeBench Pro 2887 Elo、BrowseComp 85.9%、MRCR v2)、1M入力/64K出力の仕様を引用。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google Blog「Gemini 3.1 Pro: A smarter model for your most complex tasks」</div>
+                    <span class="source-item__url">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/</span>
+                    <p class="source-item__note">2026年2月19日付。配信チャネル、アニメーションSVG生成、3D starling murmurationデモ、Wuthering Heightsポートフォリオ生成などの事例引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google Blog「A new era of intelligence with Gemini 3」</div>
+                    <span class="source-item__url">https://blog.google/products-and-platforms/products/gemini/gemini-3/</span>
+                    <p class="source-item__note">Gemini 3のLMArena 1501 Elo獲得、Deep Thinkモード位置づけの情報源。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google Blog「The latest AI news we announced in March 2026」</div>
+                    <span class="source-item__url">https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/</span>
+                    <p class="source-item__note">2026年3月のアップデート一覧（Flash-Lite、Flash Live、Search Live 200カ国展開、Ask Maps、Immersive Navigation、Personal Intelligence、Lyria 3 Pro、Antigravity）。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google AI for Developers「Gemini API Changelog」</div>
+                    <span class="source-item__url">https://ai.google.dev/gemini-api/docs/changelog</span>
+                    <p class="source-item__note">4月15日 Flash TTS、4月14日 Robotics-ER 1.6、4月2日 Gemma 4、4月1日 Flex/Priority、3月31日 Veo 3.1 Lite、3月26日 Flash Live、3月10日 embedding-2、3月3日 Flash-Lite 等の直近時系列の公式一次ソース。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google DeepMind「Gemini Robotics-ER 1.6」</div>
+                    <span class="source-item__url">https://deepmind.google/blog/gemini-robotics-er-1-6/</span>
+                    <p class="source-item__note">4月14日リリース。空間推論・計器読解・柔軟なthinking budgetの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google Cloud Blog「Ironwood: The first Google TPU for the age of inference」</div>
+                    <span class="source-item__url">https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/</span>
+                    <p class="source-item__note">Ironwood TPU(TPUv7)の1ポッド9216チップ、42.5 ExaFLOPS、TPU v5比10倍ピーク性能の仕様の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google Cloud Blog「Inside the Ironwood TPU codesigned AI stack」</div>
+                    <span class="source-item__url">https://cloud.google.com/blog/products/compute/inside-the-ironwood-tpu-codesigned-ai-stack</span>
+                    <p class="source-item__note">AI Hypercomputerのスタック設計解説。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google Antigravity 公式サイト</div>
+                    <span class="source-item__url">https://antigravity.google/</span>
+                    <p class="source-item__note">Gemini 3/3.1と組み合わさるエージェンティック開発プラットフォームの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Google Developers Blog「Build with Google Antigravity」</div>
+                    <span class="source-item__url">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</span>
+                    <p class="source-item__note">Antigravity正式アナウンス記事。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Gemini 公式サブスクリプションページ</div>
+                    <span class="source-item__url">https://gemini.google/subscriptions/</span>
+                    <p class="source-item__note">AI Plus($8/月)、AI Pro($19.99/月)、AI Ultra($249.99/月)の料金体系の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Gemini API「Long context」公式ドキュメント</div>
+                    <span class="source-item__url">https://ai.google.dev/gemini-api/docs/long-context</span>
+                    <p class="source-item__note">1M超コンテキスト扱い方の公式解説。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Gemini API「Deprecations」公式ドキュメント</div>
+                    <span class="source-item__url">https://ai.google.dev/gemini-api/docs/deprecations</span>
+                    <p class="source-item__note">Gemini 3 Pro Preview(3月9日)、Robotics-ER 1.5(4月30日)など廃止スケジュールの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Vertex AI Pricing</div>
+                    <span class="source-item__url">https://cloud.google.com/vertex-ai/generative-ai/pricing</span>
+                    <p class="source-item__note">Vertex AI側の価格体系の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Wikipedia「Gemini (language model)」</div>
+                    <span class="source-item__url">https://en.wikipedia.org/wiki/Gemini_(language_model)</span>
+                    <p class="source-item__note">歴代バージョン(1.0/1.5/2.0/2.5/3/3.1)の時系列整理の引用元。</p>
+                </div>
+            </div>
+
+            <!-- Layer 2 -->
+            <div class="source-group">
+                <div class="source-group__head">
+                    <div class="source-group__icon source-group__icon--market">🎲</div>
+                    <div class="source-group__info">
+                        <div class="source-group__title">層2：予測市場 ― Polymarket / Manifold</div>
+                        <div class="source-group__count">2026.04時点で109件のGemini関連市場が稼働中</div>
+                    </div>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Polymarket「Gemini 3.5 released by...?」</div>
+                    <span class="source-item__url">https://polymarket.com/event/gemini-3pt5-released-by-june-30</span>
+                    <p class="source-item__note">Gemini 3.5リリース時期予測市場。June 30までで20%、May 31までで8%、総取引ボリューム87.6万ドルの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Polymarket「Google Gemini Parlay」</div>
+                    <span class="source-item__url">https://polymarket.com/event/google-gemini-parlay</span>
+                    <p class="source-item__note">Gemini 3.5とGemini 4.0の複合予測市場。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Polymarket「Which company has the best AI model end of April?」</div>
+                    <span class="source-item__url">https://polymarket.com/event/which-company-has-the-best-ai-model-end-of-april</span>
+                    <p class="source-item__note">OpenAI 3%、Googleが大差でリードという競合状況の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Manifold Markets「Gemini 4.0 (Google) release date」</div>
+                    <span class="source-item__url">https://manifold.markets/Bayesian/gemini-40-google-release-date</span>
+                    <p class="source-item__note">6月8%、7月17%、8月29%、9月31%、10月35%の分布の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Manifold Markets「Gemini 3.5 (any variation) released by January 16th」</div>
+                    <span class="source-item__url">https://manifold.markets/JackOReganKenny/gemini-35-any-variation-released-by</span>
+                    <p class="source-item__note">2026年1月16日期限の初期予測市場。N/A解決済み。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Manifold Markets「Gemini 3.2 (Google) release date」</div>
+                    <span class="source-item__url">https://manifold.markets/Bayesian/gemini-32-google-release-date</span>
+                    <p class="source-item__note">Gemini 3.1 Proの次のメジャーPro系リリース追跡市場。</p>
+                </div>
+            </div>
+
+            <!-- Layer 3 -->
+            <div class="source-group">
+                <div class="source-group__head">
+                    <div class="source-group__icon source-group__icon--leak">🔮</div>
+                    <div class="source-group__info">
+                        <div class="source-group__title">層3：リーク・予想系メディア</div>
+                        <div class="source-group__count">Julian Goldie / Geeky Gadgets / Daniel Norin / Medium / GopenAI など</div>
+                    </div>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Julian Goldie SEO「Google Gemini 3.5: The Leaks, The Upgrades, and The Game Changers」</div>
+                    <span class="source-item__url">https://juliangoldie.com/google-gemini-3-5/</span>
+                    <p class="source-item__note">「Snow Bunny」コードネーム、DeepThink/Flashモード、Fierce Falcon/Ghost Falcon分業、3000行コード一発生成の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Julian Goldie SEO「Google Gemini 3.5 Snow Bunny」</div>
+                    <span class="source-item__url">https://juliangoldie.com/google-gemini-3-5-snow-bunny/</span>
+                    <p class="source-item__note">Snow Bunnyの具体的デモ、フルスタックアプリ生成、Deep Think推論モードの詳細。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Julian Goldie SEO「Google Gemini 3.5 AI Leaks Update」</div>
+                    <span class="source-item__url">https://juliangoldie.com/google-gemini-3-5-ai-leaks-update/</span>
+                    <p class="source-item__note">Fierce Falcon/Ghost Falconの役割分担の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Geeky Gadgets「Gemini 3.5: Fierce Falcon vs Ghost Falcon」</div>
+                    <span class="source-item__url">https://www.geeky-gadgets.com/gemini-3-5-fierce-falcon-vs-ghost-falcon/</span>
+                    <p class="source-item__note">LaMarina(LM Arena)でのテスト、ゲーム作成、UI設計、コーディングシミュレーション、SVG生成の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Daniel Norin「Gemini 3.5 the new AI monster soon to be unleashed」</div>
+                    <span class="source-item__url">https://danielnorin.com/en/ai-en/ai-models/gemini-3-5-the-new-ai-monster-soon-to-be-unleashed</span>
+                    <p class="source-item__note">Hieroglyph 80%、AIME 2025 100%、ScreenSpot Pro 72.7%などのリーク系数値（本文で整合性に難ありと注記）。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Dinmay Brahma (Medium)「Gemini 3.5 Leaked: The Snowbunny Checkpoint」</div>
+                    <span class="source-item__url">https://dinmaybrahma.medium.com/gemini-3-5-leaked-the-snowbunny-checkpoint-that-built-a-game-boy-emulator-in-one-shot-d1088919fb40</span>
+                    <p class="source-item__note">2026年1月22日付。SnowbunnyのGame Boy エミュレータ事例。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">GoPenAI「Gemini 3.5 Is a Game-Changer」</div>
+                    <span class="source-item__url">https://blog.gopenai.com/gemini-3-5-is-a-game-changer-google-just-leveled-up-ai-and-its-not-just-another-chatbot-df7dfbc8d4b0</span>
+                    <p class="source-item__note">「正式発表はまだ」「Snowbunny = 開発者コミュニティ内呼称」の注意喚起、Gemini 3変種/Pro DeepThink/Gemini 4前哨の3可能性分析。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">GhostFalcon.org</div>
+                    <span class="source-item__url">https://ghostfalcon.org/</span>
+                    <p class="source-item__note">Ghost FalconがGemini 3 Flash/Pro GAチェックポイントである可能性、2025年12月発見、1501 Elo観測（Gemini 3.5説と対立する視点）。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">LeaveIt2AI「Gemini 3.2 Release Date, Leaks」</div>
+                    <span class="source-item__url">https://leaveit2ai.com/ai-tools/language-model/google-gemini-3</span>
+                    <p class="source-item__note">Gemini 3.2リーク追跡の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">News.aibase「Google Gemini 3.5 Leak: Snow Bunny Can Generate 3000 Lines」</div>
+                    <span class="source-item__url">https://news.aibase.com/news/25073</span>
+                    <p class="source-item__note">中国語圏メディアによるSnow Bunny 3000行生成報道。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Community.aifire.co「Gemini 3.5 Snowbunny Leaked」</div>
+                    <span class="source-item__url">https://community.aifire.co/c/beginner-tutorials/gemini-3-5-snowbunny-leaked-3000-lines-of-code-emulators-in-one-prompt</span>
+                    <p class="source-item__note">Snowbunny内部コード(DN9、D13)観測の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Aitalkboard「When is the expected release date for Google Gemini 3.5?」</div>
+                    <span class="source-item__url">https://www.aitalkboard.com/gemini-forum/when-is-the-expected-release-date-for-google-gemini-3-5-60287/</span>
+                    <p class="source-item__note">3月2026リリース予想の引用元。</p>
+                </div>
+            </div>
+
+            <!-- Layer 4 -->
+            <div class="source-group">
+                <div class="source-group__head">
+                    <div class="source-group__icon source-group__icon--media">📰</div>
+                    <div class="source-group__info">
+                        <div class="source-group__title">層4：技術系・分析系メディア</div>
+                        <div class="source-group__count">VentureBeat / DataCamp / Vellum / BenchLM / LMCouncil / Tom's Guide / Engadget など</div>
+                    </div>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">VentureBeat「Google Gemini 3.1 Pro first impressions: a Deep Think Mini with adjustable」</div>
+                    <span class="source-item__url">https://venturebeat.com/technology/google-gemini-3-1-pro-first-impressions-a-deep-think-mini-with-adjustable</span>
+                    <p class="source-item__note">3.1 Proのスリーティア・シンキング(Low/Medium/High)、「Deep Think Mini」位置づけの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">DataCamp「Gemini 3.1: Features, Benchmarks, Hands-On Tests, and More」</div>
+                    <span class="source-item__url">https://www.datacamp.com/blog/gemini-3-1</span>
+                    <p class="source-item__note">3.1 Pro分析、Deep Thinkとの比較、Claudeとの対比の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Zvi Mowshowitz「Gemini 3.1 Pro Aces Benchmarks, I Suppose」</div>
+                    <span class="source-item__url">https://thezvi.substack.com/p/gemini-31-pro-aces-benchmarks-i-suppose</span>
+                    <p class="source-item__note">3.1 Proのベンチマーク反応、「It's a Gemini model」というユーザー評価ニュアンスの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Vellum AI「Flagship Model Report: GPT-5.1 vs Gemini 3 Pro vs Claude Opus 4.5」</div>
+                    <span class="source-item__url">https://www.vellum.ai/blog/flagship-model-report</span>
+                    <p class="source-item__note">Gemini 3 Pro、GPT-5.1、Claude Opus 4.5の比較の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Vellum AI「Google Gemini 3 Benchmarks (Explained)」</div>
+                    <span class="source-item__url">https://www.vellum.ai/blog/google-gemini-3-benchmarks</span>
+                    <p class="source-item__note">LiveCodeBench Pro 2439 Eloなどの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">BenchLM.ai「GPT-5 vs Gemini in 2026: Full Benchmark Breakdown」</div>
+                    <span class="source-item__url">https://benchlm.ai/blog/posts/gpt5-vs-gemini-2026</span>
+                    <p class="source-item__note">GPT-5.4 84点、Gemini 3.1 Pro 83点の総合比較の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">LMCouncil.ai「AI Model Benchmarks Apr 2026」</div>
+                    <span class="source-item__url">https://lmcouncil.ai/benchmarks</span>
+                    <p class="source-item__note">2026年4月時点のHLE集計(Gemini 3 Pro Preview 37.52%、Claude Opus 4.6 34.44%、GPT-5 Pro 31.64%、GPT-5.2 27.80%)。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Voxfor「Gemini 4: Google's Next AI Model Ecosystem」</div>
+                    <span class="source-item__url">https://www.voxfor.com/gemini-4-google-next-ai-model-ecosystem/</span>
+                    <p class="source-item__note">Gemini 4の5つの柱(エージェント、World Model、拡張コンテキスト、永続メモリ、Ironwood)、I/O 2026 5月19-20日確定の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Tom's Guide「Google I/O 2026: Date, time, potential announcements」</div>
+                    <span class="source-item__url">https://www.tomsguide.com/phones/google-pixel-phones/google-i-o-2026-date-time-potential-announcements-and-everything-else-you-need-to-know</span>
+                    <p class="source-item__note">Google I/O 2026のキーノート内容予想の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Engadget「What to expect from Google I/O 2026」</div>
+                    <span class="source-item__url">https://www.engadget.com/ai/what-to-expect-from-google-io-2026-200252914.html</span>
+                    <p class="source-item__note">I/O 2026で予想されるGeminiモデルアップデートの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Android Central「Google I/O 2026: How to watch and what you need to know」</div>
+                    <span class="source-item__url">https://www.androidcentral.com/phones/google-pixel/google-io-2026-how-to-watch-what-you-need-to-know</span>
+                    <p class="source-item__note">GeminiがI/O中心になるという予想の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">eWeek「Google's March 2026 AI Drop」</div>
+                    <span class="source-item__url">https://www.eweek.com/news/google-march-2026-ai-drop-gemini-updates/</span>
+                    <p class="source-item__note">Personal Intelligence、会話検索、開発者ツールの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">SiliconAngle「DeepMind launches Gemini Robotics-ER 1.6」</div>
+                    <span class="source-item__url">https://siliconangle.com/2026/04/15/deepmind-launches-gemini-robotics-er-1-6-meet-precise-physical-ai-demands/</span>
+                    <p class="source-item__note">4月15日リリース報道の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Yugatech「Google Gemini 3.2 Flash TTS launched」</div>
+                    <span class="source-item__url">https://www.yugatech.com/software/google-gemini-3-2-flash-tts-launched/</span>
+                    <p class="source-item__note">70言語対応、オーディオタグ、SynthID透かしの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Mean CEO Blog「Google Gemini News | April, 2026」</div>
+                    <span class="source-item__url">https://blog.mean.ceo/google-gemini-news-april-2026/</span>
+                    <p class="source-item__note">4月のクロスプラットフォーム・インポート、Personal Intelligence無料化、メモリ機能の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Tom's Hardware「Google deploys new Axion CPUs and seventh-gen Ironwood TPU」</div>
+                    <span class="source-item__url">https://www.tomshardware.com/tech-industry/artificial-intelligence/google-deploys-new-axion-cpus-and-seventh-gen-ironwood-tpu-training-and-inferencing-pods-beat-nvidia-gb300-and-shape-ai-hypercomputer-model</span>
+                    <p class="source-item__note">9216 AIアクセラレータ、42.5 FP8 ExaFLOPS、Nvidia GB300との比較の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">CloudOptimo「Google TPU Ironwood: Revolutionizing AI Inference at Scale」</div>
+                    <span class="source-item__url">https://www.cloudoptimo.com/blog/google-tpu-ironwood-revolutionizing-ai-inference-at-scale/</span>
+                    <p class="source-item__note">Ironwood TPUポッド高密度クラスター構成の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Seeking Alpha「Google introduces new pricing tiers for Gemini」</div>
+                    <span class="source-item__url">https://seekingalpha.com/news/4572373-google-introduces-new-pricing-tiers-for-gemini-based-on-inference-usage</span>
+                    <p class="source-item__note">Flex/Priority/Batch/Caching 4ティア構造の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Metacto / Finout / TL;DL / Eesel 各種料金記事</div>
+                    <span class="source-item__url">https://www.metacto.com/blogs/the-true-cost-of-google-gemini-a-guide-to-api-pricing-and-integration</span>
+                    <p class="source-item__note">Flash-Lite $0.10/M 〜 3.1 Pro $4/M まで各価格帯、AI Ultra位置づけの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Introl / GuruSup / Alyvro / RDWorld / Ace Cloud 各種比較記事</div>
+                    <span class="source-item__url">(複数URL)</span>
+                    <p class="source-item__note">GPT-5.x vs Gemini 3.x vs Claude Opus 4.xの各方面比較の引用元。</p>
+                </div>
+            </div>
+
+            <!-- Layer 5 -->
+            <div class="source-group">
+                <div class="source-group__head">
+                    <div class="source-group__icon source-group__icon--exec">🎙</div>
+                    <div class="source-group__info">
+                        <div class="source-group__title">層5：Demis Hassabis / 経営層発言</div>
+                        <div class="source-group__count">Fortune / LinkedIn / Times of India などのインタビュー群</div>
+                    </div>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Fortune「Demis Hassabis on chatbot wars, AI safety」</div>
+                    <span class="source-item__url">https://fortune.com/2026/04/16/demis-hassabis-google-deepmind-chatbot-wars-ai-safety/</span>
+                    <p class="source-item__note">2026年4月16日付。「商業競争よりAGIを安全にゴールラインに通すことが重要」発言の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Fortune「Google AI boss Demis Hassabis has 4-step plan」</div>
+                    <span class="source-item__url">https://fortune.com/2026/02/11/google-ai-boss-demis-hassabis-4-step-plan-return-golden-era/</span>
+                    <p class="source-item__note">Hassabisの4ステップ戦略、Gemini競争力回復戦略の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">LinkedIn (Alex Kantrowitz)「Google DeepMind CEO Demis Hassabis on AI's Next Breakthroughs」</div>
+                    <span class="source-item__url">https://www.linkedin.com/pulse/google-deepmind-ceo-demis-hassabis-ais-next-what-agi-ai-kantrowitz-qryhe</span>
+                    <p class="source-item__note">「広告を2026年に導入する計画は現時点でない」発言の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Times of India「Google DeepMind CEO Demis Hassabis」</div>
+                    <span class="source-item__url">https://timesofindia.indiatimes.com/technology/tech-news/google-deepmind-ceo-demis-hassabis-google-combined-all-the-companys-resources-to-catch-up-with/articleshow/130157692.cms</span>
+                    <p class="source-item__note">Gemini 2025年Q4末時点で月間アクティブユーザー7.5億人の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">eu.36kr「AI Godfather Demis Hassabis」</div>
+                    <span class="source-item__url">https://eu.36kr.com/en/p/3710036449423745</span>
+                    <p class="source-item__note">ダボス・フォーラムでのAGI到達確率50%発言の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Sources.news「Interview Demis Hassabis Sources」</div>
+                    <span class="source-item__url">https://sources.news/p/interview-demis-hassabis-sources</span>
+                    <p class="source-item__note">広告導入インタビュー発言の元記事。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Sherwood News「Google to bring ads to Gemini chatbot in 2026」</div>
+                    <span class="source-item__url">https://sherwood.news/tech/google-to-bring-ads-to-gemini-chatbot-in-2026/</span>
+                    <p class="source-item__note">広告導入議論の外部論評。</p>
+                </div>
+            </div>
+
+            <!-- Layer 6 -->
+            <div class="source-group">
+                <div class="source-group__head">
+                    <div class="source-group__icon source-group__icon--reddit">👥</div>
+                    <div class="source-group__info">
+                        <div class="source-group__title">層6：Reddit / X / コミュニティ観測</div>
+                        <div class="source-group__count">r/Bard / r/singularity / r/AISEOInsider / r/GeminiAI など多数</div>
+                    </div>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Reddit r/Bard「Something is coming. Gemini models are no longer marked as 'new'」</div>
+                    <span class="source-item__url">https://www.reddit.com/r/Bard/comments/1skl372/something_is_coming_gemini_models_are_no_longer/</span>
+                    <p class="source-item__note">「3.2 Proが4月末」「3.5はGoogle I/Oで落ちる」というコミュニティ観測の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Reddit r/Bard「Gemini 3.5 date predictions」</div>
+                    <span class="source-item__url">https://www.reddit.com/r/Bard/comments/1p0ma3q/gemini_35_date/</span>
+                    <p class="source-item__note">3.5リリース予想議論の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Reddit r/AISEOInsider 各種Snow Bunny / Fierce Falcon スレッド</div>
+                    <span class="source-item__url">(複数URL)</span>
+                    <p class="source-item__note">Fierce/Ghost Falcon、Snow Bunny Game Boy エミュレータ、2026年初頭リリース予想の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Reddit r/singularity「Gemini 3 Deep Think benchmarks」</div>
+                    <span class="source-item__url">https://www.reddit.com/r/singularity/comments/1pec4zg/gemini_3_deep_think_benchmarks_released_hits_451/</span>
+                    <p class="source-item__note">Deep Think ARC-AGI-2 45.1%の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Reddit r/singularity「Gemini 3 was trained 100% on TPUs」</div>
+                    <span class="source-item__url">https://www.reddit.com/r/singularity/comments/1p1d32h/this_is_the_true_ai_moat_gemini_3_was_trained_100/</span>
+                    <p class="source-item__note">TPU v5比10倍ピーク性能、4倍パフォーマンス/ワットの引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Reddit r/singularity「Gemini 3 Pro Vision benchmarks」</div>
+                    <span class="source-item__url">https://www.reddit.com/r/singularity/comments/1pf6nd6/gemini_3_pro_vision_benchmarks_finally_compares/</span>
+                    <p class="source-item__note">MMMU Pro 81.0% vs GPT-5.1 76% vs Opus 4.5 72%の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">Reddit r/google_antigravity「Gemini set to 3.5 Pro in settings, but the response says 2.5 Pro」</div>
+                    <span class="source-item__url">https://www.reddit.com/r/google_antigravity/comments/1rpr10y/gemini_set_to_35_pro_in_settings_but_the_response/</span>
+                    <p class="source-item__note">内部モデル表示混沌の観察の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">X (mark_k)「Gemini 3 models stealth released as 'OrionMist' and 'LithiumFlow'」</div>
+                    <span class="source-item__url">https://x.com/mark_k/status/1979990463571509486</span>
+                    <p class="source-item__note">OrionMist/LithiumFlowがGemini 3 Proのステルス版であるという観測の引用元。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">X (viktoroddy / jerrod_lew) Snowbunny Game Boy エミュレータ</div>
+                    <span class="source-item__url">https://x.com/viktoroddy/status/1999158848372809809</span>
+                    <p class="source-item__note">Snowbunny Game Boy エミュレータ事例の一次ソース。</p>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">X (asteris_ai)「Google announced GA of Gemini 3.5 Pro」</div>
+                    <span class="source-item__url">https://x.com/asteris_ai/status/2029308963125088584</span>
+                    <p class="source-item__note">3M-tokenコンテキスト窓に関する観測（要検証情報として扱い）。</p>
+                </div>
+            </div>
+
+            <!-- Layer 7 -->
+            <div class="source-group">
+                <div class="source-group__head">
+                    <div class="source-group__icon source-group__icon--video">🎬</div>
+                    <div class="source-group__info">
+                        <div class="source-group__title">層7：動画コンテンツ (YouTube)</div>
+                        <div class="source-group__count">リーク解説・比較動画・予想動画</div>
+                    </div>
+                </div>
+
+                <div class="source-item">
+                    <div class="source-item__title">「Gemini 3.5? NEW Gemini Stealth Model Is POWERFUL & Fast」</div>
+                    <span class="source-item__url">https://www.youtube.com/watch?v=1abLcL33eKA</span>
+                </div>
+                <div class="source-item">
+                    <div class="source-item__title">「Gemini 3.5 LEAKS: Google Tests New Models on LM Arena!」</div>
+                    <span class="source-item__url">https://www.youtube.com/watch?v=t4FkYkKtO8w</span>
+                </div>
+                <div class="source-item">
+                    <div class="source-item__title">「Gemini 3.5 Explained: 2.1 Million Tokens」</div>
+                    <span class="source-item__url">https://www.youtube.com/watch?v=j98kW6LN5vo</span>
+                    <p class="source-item__note">2.1Mトークン窓リーク予想の引用元。</p>
+                </div>
+                <div class="source-item">
+                    <div class="source-item__title">「Gemini 3.5 Testing: 3000 Lines of Code in One Prompt!」</div>
+                    <span class="source-item__url">https://www.youtube.com/watch?v=w_DzuiFyBYE</span>
+                    <p class="source-item__note">Snowbunny 3000行コード・Hieroglyph 88%スコアの引用元。</p>
+                </div>
+                <div class="source-item">
+                    <div class="source-item__title">「GEMINI 4 + VEO 4: Google I/O 2026 Just Shocked Everyone」</div>
+                    <span class="source-item__url">https://www.youtube.com/watch?v=AYiY-cmNSjk</span>
+                    <p class="source-item__note">I/O 2026 Gemini 4・Veo 4 予想コンテンツの引用元。</p>
+                </div>
+                <div class="source-item">
+                    <div class="source-item__title">「How Gemini 3.1 Pro & Deep Think CRUSH every Benchmark」</div>
+                    <span class="source-item__url">https://www.youtube.com/watch?v=5vvKx-wCIIk</span>
+                    <p class="source-item__note">ARC-AGI-2 77.1%(Deep Think 85%)解説の引用元。</p>
+                </div>
+                <div class="source-item">
+                    <div class="source-item__title">「BREAKING: NEW Secret Models on LMARENA!」</div>
+                    <span class="source-item__url">https://www.youtube.com/watch?v=wGa8Z4JaqUM</span>
+                    <p class="source-item__note">LithiumFlow/OrionMist観測の引用元。</p>
+                </div>
+            </div>
+
+            <h2>層別の使い分け</h2>
+            <div class="callout callout--info">
+                <div class="callout__head"><span class="callout__icon">🧭</span>本稿の情報源トリアージ</div>
+                <ul style="margin:6px 0 0;padding-left:20px;">
+                    <li><b>高確度</b> — 主に<b>層1（公式）</b>と<b>層2（予測市場）</b></li>
+                    <li><b>中確度</b> — 主に<b>層3（リーク）</b>と<b>層4（技術メディア）</b>の複数独立ソース</li>
+                    <li><b>低確度</b> — 主に<b>層3（単独リーク）</b>と<b>層6-7（個人投稿・動画）</b></li>
+                    <li><b>トーン判定</b> — <b>層5（経営層）</b>はリリース時のナラティブ予測に利用</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="../chapters/00-prologue.html">序章</a><a href="../chapters/02-release.html">時期予想</a><a href="../chapters/12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="timeline.html">タイムライン</a><a href="lineup.html">モデル一覧</a><a href="glossary.html">用語集</a><a href="sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

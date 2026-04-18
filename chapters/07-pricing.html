@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="第7章：Gemini 3.5の価格・配信戦略。AI Pro $19.99/月とAI Ultra $249.99/月はそのままか。全方位展開の配信チャネル。">
+<title>第7章：価格・配信戦略 | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>CHAPTER 07</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="../pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="../pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="../pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="../pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="../pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><a href="06-context.html">第6章</a><span class="sep">›</span><span>第7章</span></nav>
+        <div class="article__chapter-num">CHAPTER 07</div>
+        <h1 class="article__title">価格・配信戦略<br><span class="text-accent" style="font-size:.65em;">— 「Pro」は維持、「Ultra」は強化される</span></h1>
+
+        <p class="article__lead">
+            価格帯についての予想はいっそう明快だ。AI Plus $8/月、AI Pro $19.99/月、AI Ultra $249.99/月という料金体系は<strong>2026年4月時点で非常に安定</strong>しており、3.5登場を理由に値上げする動機はGoogle側にほぼない。むしろ<em>縦の差別化で顧客を上位プランに誘導する</em>流れになる。
+        </p>
+
+        <div class="article__meta">
+            <span class="article__meta-item">📖 約 5 分</span>
+            <span class="article__meta-item">🎯 価格・配信</span>
+            <span class="article__meta-item">🟢 高確度</span>
+        </div>
+
+        <div class="article__body">
+            <h2>消費者サブスクリプション体系（維持濃厚）</h2>
+
+            <div class="lineup-grid">
+                <div class="lineup-card">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Google AI Plus</div>
+                        <span class="lineup-card__badge">BASIC</span>
+                    </div>
+                    <p class="lineup-card__desc">ライトユーザー向けの入門枠。基本的なGemini機能とストレージ拡張。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">月額</span><span class="lineup-spec__value">$8</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">3.5 対応</span><span class="lineup-spec__value">Flash 中心</span></div>
+                    </div>
+                </div>
+                <div class="lineup-card lineup-card--flash">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Google AI Pro</div>
+                        <span class="lineup-card__badge lineup-card__badge--flagship">PRO</span>
+                    </div>
+                    <p class="lineup-card__desc">コアユーザー向けのスタンダード。3.5 Pro、Deep Think Mid、Veoなどを実用的に。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">月額</span><span class="lineup-spec__value">$19.99</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">3.5 対応</span><span class="lineup-spec__value">Pro 標準</span></div>
+                    </div>
+                </div>
+                <div class="lineup-card lineup-card--deep">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Google AI Ultra</div>
+                        <span class="lineup-card__badge lineup-card__badge--ultra">ULTRA</span>
+                    </div>
+                    <p class="lineup-card__desc">プロフェッショナル/ヘビーユーザー向け。Deep Think Pro、Ultra専用枠、限定コンテキスト拡張。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">月額</span><span class="lineup-spec__value">$249.99</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">プロモ</span><span class="lineup-spec__value">$124.99×3ヶ月</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <p>3.5でもAI Proプランに<strong>「標準的なGemini 3.5 Pro」</strong>を組み込み、Deep Thinkフル稼働や3.5 Ultraモデルは<strong>AI Ultraプラン専用</strong>、という縦の差別化で顧客を上位プランに誘導する流れになる。</p>
+
+            <h2>API価格の想定</h2>
+
+            <p>API価格については、3.1 Proが<strong>200Kトークンまでは入力$2/M、出力$12/M、200K超は入力$3〜4/M、出力$18/M前後</strong>という設定になっている。3.5ではこの水準が概ね踏襲され、<em>Flex（安価・遅延許容）とPriority（優先・低遅延）の2新ティアがそのまま継承</em>される見通し。</p>
+
+            <div class="cmp-table">
+                <div class="cmp-row cmp-row--head"><div class="cmp-label">3.5 API 価格予想</div><div class="cmp-val">USD/Mトーク</div></div>
+                <div class="cmp-row"><div class="cmp-label">入力 (〜200K)</div><div class="cmp-val">$2</div></div>
+                <div class="cmp-row"><div class="cmp-label">入力 (200K〜)</div><div class="cmp-val">$3-4</div></div>
+                <div class="cmp-row"><div class="cmp-label">出力 (〜200K)</div><div class="cmp-val">$12</div></div>
+                <div class="cmp-row"><div class="cmp-label">出力 (200K〜)</div><div class="cmp-val">$18</div></div>
+                <div class="cmp-row"><div class="cmp-label">Flash 入力</div><div class="cmp-val cmp-val--hi">$0.30</div></div>
+                <div class="cmp-row"><div class="cmp-label">Flash‑Lite 入力</div><div class="cmp-val cmp-val--hi">$0.10</div></div>
+            </div>
+
+            <p>画像生成や動画生成の課金は、Vertex AIのピクセルベース課金との整合を取りつつ、さらに細分化されていくと見られる。</p>
+
+            <h2>配信チャネル：Google全面展開</h2>
+
+            <p>配信チャネルは、実質的に<strong>Googleのあらゆる面に同時展開</strong>される。</p>
+
+            <div class="chip-row">
+                <span class="chip chip--blue">Gemini App</span>
+                <span class="chip chip--blue">AI Studio</span>
+                <span class="chip chip--cyan">Gemini API</span>
+                <span class="chip chip--cyan">Vertex AI</span>
+                <span class="chip chip--cyan">Gemini Enterprise</span>
+                <span class="chip chip--green">Gemini CLI</span>
+                <span class="chip chip--green">Antigravity</span>
+                <span class="chip chip--green">Android Studio</span>
+                <span class="chip chip--purple">NotebookLM</span>
+                <span class="chip chip--purple">Chrome Side Panel</span>
+                <span class="chip chip--gold">Workspace (Docs/Sheets/Slides)</span>
+                <span class="chip chip--gold">Google Search (AI Mode)</span>
+                <span class="chip chip--gold">Google Maps (Ask Maps)</span>
+                <span class="chip chip--pink">Pixel Magic Cue</span>
+                <span class="chip chip--pink">Google Vids</span>
+            </div>
+
+            <h2>Personal Intelligence との連携</h2>
+
+            <div class="callout callout--info">
+                <div class="callout__head"><span class="callout__icon">🏠</span>Personal Intelligence</div>
+                <p>特筆すべきは、2026年3月時点でGemini AppがすでにGmail、Calendar、Drive、YouTube、Mapsと連携する<b>「Personal Intelligence」を無料開放</b>していること。3.5はこの個人データ基盤の上に載る形で、<em>ユーザーの生活にさらに深く食い込む存在</em>になる。</p>
+            </div>
+
+            <h2>企業向け：Enterprise SKU の刷新</h2>
+
+            <p>企業向けの<strong>Enterprise SKUが3.5向けに刷新</strong>され、年間契約で大幅なボリュームディスカウントが提供される可能性が高い。特に：</p>
+
+            <ul>
+                <li>1社あたりのRPM（リクエスト/分）上限の引き上げ</li>
+                <li>3M〜5Mコンテキスト枠のプレビューアクセス</li>
+                <li>専用VPC・データレジデンシー選択肢</li>
+                <li>Robotics‑ER/Antigravityとのバンドル割引</li>
+            </ul>
+
+            <h2>値上げリスクは低い</h2>
+
+            <div class="confidence" data-conf="88">
+                <div class="confidence__head">
+                    <span class="confidence__label">🎯 Pro/Ultra 料金据え置きの確信度</span>
+                    <span class="confidence__pct">88%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--high"></div></div>
+            </div>
+
+            <p>Ironwood TPUによる推論コスト低減（<a href="09-infra.html">第9章参照</a>）と、OpenAI/Anthropicとの料金競争を考えると、GoogleがこのタイミングでPro/Ultraの月額を値上げする合理的な動機は見当たらない。むしろ、Flex/Priorityのような柔軟な料金制御の方が、3.5の登場に合わせて拡充されるだろう。</p>
+        </div>
+
+        <div class="chapter-nav">
+            <a class="chapter-nav__link chapter-nav__link--prev" href="06-context.html">
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">← PREV</div><div class="chapter-nav__t">第6章：コンテキスト</div></div>
+            </a>
+            <a class="chapter-nav__link chapter-nav__link--next" href="08-competition.html">
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">NEXT →</div><div class="chapter-nav__t">第8章：三つ巴の競合状況</div></div>
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="00-prologue.html">序章</a><a href="02-release.html">時期予想</a><a href="05-benchmarks.html">ベンチマーク</a><a href="12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="../pages/timeline.html">タイムライン</a><a href="../pages/lineup.html">モデル一覧</a><a href="../pages/glossary.html">用語集</a><a href="../pages/sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="../pages/about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

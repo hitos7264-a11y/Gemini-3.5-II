@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="序章：なぜ「Gemini 3.5」を今語るのか。2026年4月18日、嵐の前の静けさの中でSnow Bunnyを読み解く出発点。">
+<title>序章：なぜ「Gemini 3.5」を今語るのか | Gemini 3.5 大予想</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand" aria-label="ホーム">
+        <span class="brand-icon" aria-hidden="true"></span>
+        <span class="brand-text"><b>Gemini 3.5 大予想</b><span>序章 / PROLOGUE</span></span>
+    </a>
+    <button class="top-nav__btn" id="open-search" aria-label="検索を開く">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </button>
+    <button class="top-nav__btn" id="open-drawer" aria-label="メニューを開く">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+</nav>
+
+<div class="reading-progress" aria-hidden="true"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header">
+        <div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+    </div>
+    <div class="drawer__section">
+        <div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章：なぜ「3.5」を今語るのか</span></a>
+        <a class="drawer__link" href="01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">2026年4月の現在地</span></a>
+        <a class="drawer__link" href="02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">リリース時期予想</span></a>
+        <a class="drawer__link" href="03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunnyと2つの猛禽</span></a>
+        <a class="drawer__link" href="04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク予想</span></a>
+        <a class="drawer__link" href="06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキストとマルチモーダル</span></a>
+        <a class="drawer__link" href="07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信戦略</span></a>
+        <a class="drawer__link" href="08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">三つ巴の競合状況</span></a>
+        <a class="drawer__link" href="09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング戦略の謎</span></a>
+        <a class="drawer__link" href="11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">懐疑論とリスク</span></a>
+        <a class="drawer__link" href="12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section">
+        <div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="../pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="../pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデルラインナップ</span></a>
+        <a class="drawer__link" href="../pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク比較</span></a>
+        <a class="drawer__link" href="../pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="../pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">参照情報源</span></a>
+        <a class="drawer__link" href="../pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head">
+        <input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+        <button class="search-panel__close" id="close-search">閉じる</button>
+    </div>
+    <div class="search-panel__results" id="search-results">
+        <div class="search-empty">キーワードを入力してください。</div>
+    </div>
+</div>
+
+<!-- ============ ARTICLE ============ -->
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb">
+            <a href="../index.html">トップ</a>
+            <span class="sep">›</span>
+            <span>序章</span>
+        </nav>
+
+        <div class="article__chapter-num">CHAPTER 00 · 序章</div>
+        <h1 class="article__title">なぜ「Gemini 3.5」を<br>今語るのか</h1>
+
+        <p class="article__lead">
+            2026年4月18日、嵐の前の静けさ。OpenAIもAnthropicも休む間もなくモデルを更新する只中、Googleだけが奇妙な「空白」をつくっている。その空白に滑り込んでくるはずのコード名「Snow Bunny」、通称 Gemini 3.5 — 本予想サイトは、そこを徹底的に読み解くための出発点である。
+        </p>
+
+        <div class="article__meta">
+            <span class="article__meta-item">📅 2026.04.18</span>
+            <span class="article__meta-item">📖 約 3 分</span>
+            <span class="article__meta-item">🎯 導入</span>
+        </div>
+
+        <div class="article__body">
+            <p>AI業界の時計は、2026年に入ってから異様に早く進んでいる。OpenAIは<strong>GPT‑5.2、5.4</strong>と次々に派生モデルを投入し、Anthropicは<strong>Claude Opus 4.5から4.6</strong>へと休むことなくローリングアップデートを重ね、xAIは<strong>Grok 5</strong>の構想を公にしている。その只中でGoogle DeepMindだけが、2025年11月に<strong>Gemini 3 Pro</strong>を、そして2026年2月19日に<strong>Gemini 3.1 Pro</strong>を矢継ぎ早に投入し、LMArenaのリーダーボードを<em>1501 Eloという史上初の四桁Elo</em>で引っ張り、世界最強クラスの座を死守し続けている。</p>
+
+            <div class="callout callout--info">
+                <div class="callout__head"><span class="callout__icon">ℹ</span>LMArena 1501 Elo とは</div>
+                <p>LMArenaは、匿名のAIモデル同士がブラインドでバトルし、ユーザー投票でEloレーティングが決まるリーダーボード。1501 Eloは「史上初の四桁Elo超え」として2025年11月のGemini 3 Pro到達時に話題になった数字。</p>
+            </div>
+
+            <p>そうした状況下で<strong>「次の本命」</strong>として注目を集めているのが、いまだ公式発表のないコード名「<em>Snow Bunny</em>」――通称 Gemini 3.5 である。ちょうど<strong>Google I/O 2026</strong>が2026年5月19日〜20日にカリフォルニア州マウンテンビューのShoreline Amphitheatreで開催されると確定しており、多くの観測筋は「そこで発表されるのはGemini 3.5ではないか」と予想している。</p>
+
+            <div class="fact-highlight">
+                <div class="fact-highlight__big">5/19-20</div>
+                <div class="fact-highlight__label">Google I/O 2026 (Shoreline Amphitheatre)</div>
+                <div class="fact-highlight__note">このキーノートで「Snow Bunny」が「Gemini 3.5」として正式に名乗りを上げるかどうか、業界全体が息をつめて待っている。</div>
+            </div>
+
+            <h2>本稿のスタンス</h2>
+
+            <p>本稿ではこの2026年4月18日時点という<strong>「嵐の前の静けさ」</strong>のタイミングで、公開情報・リーク・予測市場・歴代のリリースパターンのすべてを突き合わせ、Gemini 3.5がどのようなモデルになるのかを、できる限り立体的に、そして<em>どこまでが堅いシナリオで、どこからが妄想寄りなのかを明確に腑分け</em>しながら論じていく。</p>
+
+            <div class="callout callout--note">
+                <div class="callout__head"><span class="callout__icon">✎</span>確信度の3段階</div>
+                <p>本サイトでは各予想に確信度バー（0〜100%）を付与します。</p>
+                <ul style="margin-top:8px;padding-left:20px;">
+                    <li><span class="text-green"><b>高確度</b></span> — 公式1次情報、予測市場の厚い値段が裏付け</li>
+                    <li><span class="text-gold"><b>中確度</b></span> — 技術メディアの集計・複数の独立リーク</li>
+                    <li><span class="text-red"><b>低確度</b></span> — 未検証の速報リーク、単発デモ</li>
+                </ul>
+            </div>
+
+            <h2>12章で追いかけるもの</h2>
+
+            <p>本編は12章構成である。まず第1章で<strong>2026年4月時点のGoogleモデル棚</strong>を整理し、次に第2章で<strong>リリース時期の確率分布</strong>を予測市場から読み解く。第3章では「Snow Bunny」「Fierce Falcon」「Ghost Falcon」といった<em>内部コードネームの正体</em>に迫り、第4〜第6章では機能・ベンチマーク・コンテキストウィンドウを論じる。</p>
+
+            <p>第7章で価格・配信戦略、第8章で<strong>GPT-5.4 / Claude Opus 4.6 / Grok 5</strong>との競合、第9章でGoogleの垂直統合を支える<strong>Ironwood TPU</strong>、第10章で「そもそも3.5という名前で出るのか」という命名の不確実性、第11章でリーク情報の懐疑的な再検討と残存リスク、最後の第12章で<strong>すべてを集約した本命シナリオ</strong>を提示する。</p>
+
+            <div class="pull-quote">
+                「Snow Bunny」が「Gemini 3.5」として公式に名乗りを上げる瞬間を、業界全体が息をつめて待っている。
+                <cite>— 本稿第12章より先取り</cite>
+            </div>
+
+            <h2>読者へのお願い</h2>
+
+            <p>本稿に登場する数字や名前の多くは、<strong>Googleの公式発表ではない</strong>。2026年4月18日時点で断片的に漏れ出している情報、コミュニティの観測、リーク系ブログやX(旧Twitter)投稿、予測市場のオッズ、そして歴代のリリースパターンを突き合わせた「推測の束」である。したがって、本稿のいかなる箇所も「Googleがそう言った」と受け取らないでほしい。あくまで<em>2026年4月18日時点で観測可能な情報を、できるだけ誠実にモデル化した予想</em>である。</p>
+
+            <p>それでも、このタイミングで一度立ち止まって輪郭を描いておくことには意味がある。5月19日の夜明けまで、<strong>あと1ヶ月余り</strong>。「Snow Bunny」の影が徐々に濃くなっていくこの時期に、どこに線が引かれていて、どこから先が未知なのかを、一緒に確認していこう。</p>
+
+            <div class="section-link-row">
+                <a class="section-link" href="01-current.html">
+                    <span class="section-link__icon">🏁</span>
+                    <span class="section-link__text">第1章：2026年4月の現在地</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="12-summary.html">
+                    <span class="section-link__icon">🎯</span>
+                    <span class="section-link__text">第12章：結論を先に読む</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- chapter navigation -->
+        <div class="chapter-nav">
+            <a class="chapter-nav__link chapter-nav__link--prev" href="../index.html">
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="chapter-nav__body">
+                    <div class="chapter-nav__dir">← TOP</div>
+                    <div class="chapter-nav__t">トップページ</div>
+                </div>
+            </a>
+            <a class="chapter-nav__link chapter-nav__link--next" href="01-current.html">
+                <div class="chapter-nav__body">
+                    <div class="chapter-nav__dir">NEXT →</div>
+                    <div class="chapter-nav__t">第1章：2026年4月の現在地</div>
+                </div>
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand">
+            <span class="brand-icon" aria-hidden="true"></span>
+            <div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div>
+        </div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="00-prologue.html">序章</a><a href="02-release.html">時期予想</a><a href="05-benchmarks.html">ベンチマーク</a><a href="12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="../pages/timeline.html">タイムライン</a><a href="../pages/lineup.html">モデル一覧</a><a href="../pages/glossary.html">用語集</a><a href="../pages/sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="../pages/about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。Google / DeepMindとは無関係です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="トップへ戻る">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

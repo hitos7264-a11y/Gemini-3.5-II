@@ -1,0 +1,254 @@
+Gemini 3.5 大予想を執筆するにあたって参照した情報源をすべて列挙します。
+
+参照した情報源一覧(2026年4月18日時点・調査順)
+公式ソース ―― Google / Google DeepMind
+Google DeepMind「Gemini 3.1 Pro Model Card」 — https://deepmind.google/models/model-cards/gemini-3-1-pro/ 2026年2月19日公開。Gemini 3.1 Proの公式ベンチマーク(HLE 44.4%、ARC-AGI-2 77.1%、GPQA Diamond 94.3%、SWE-Bench Verified 80.6%、LiveCodeBench Pro 2887 Elo、BrowseComp 85.9%、MRCR v2など)、1Mトークン入力/64K出力の仕様を引用。
+
+Google Blog「Gemini 3.1 Pro: A smarter model for your most complex tasks」 — https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/ 2026年2月19日付。Gemini 3.1 Proの配信チャネル(Gemini API、Vertex AI、Gemini Enterprise、NotebookLM、Antigravityなど)、コード・アニメーションSVG生成、3D starling murmurationデモ、Wuthering Heightsポートフォリオ生成などの事例を引用。
+
+Google Blog「A new era of intelligence with Gemini 3」 — https://blog.google/products-and-platforms/products/gemini/gemini-3/ Gemini 3のLMArena 1501 Elo獲得、Deep Thinkモードの位置づけ情報源。
+
+Google Blog「The latest AI news we announced in March 2026」 — https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/ 2026年3月のアップデート一覧(Gemini 3.1 Flash-Lite、Flash Live、Search Live 200カ国展開、Ask Maps、Immersive Navigation、Personal Intelligence、Lyria 3 Pro、Google Antigravityなど)の引用元。
+
+Google AI for Developers「Gemini API Changelog」 — https://ai.google.dev/gemini-api/docs/changelog 4月15日 Flash TTS Preview、4月14日 Robotics-ER 1.6、4月2日 Gemma 4、4月1日 Flex/Priority推論ティア、3月31日 Veo 3.1 Lite、3月26日 Flash Live、3月25日 Lyria 3、3月10日 embedding-2、3月3日 Flash-Lite Previewといった直近リリースの公式時系列の引用元。
+
+Google DeepMind「Gemini Robotics-ER 1.6」 — https://deepmind.google/blog/gemini-robotics-er-1-6/ / https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-1-6/ 4月14日リリースのロボティクスモデル、空間推論・計器読解・柔軟なthinking budgetの引用元。
+
+Google Cloud Blog「Inside the Ironwood TPU codesigned AI stack」 / 「Ironwood: The first Google TPU for the age of inference」 — https://cloud.google.com/blog/products/compute/inside-the-ironwood-tpu-codesigned-ai-stack / https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/ Ironwood TPU(TPUv7)の1ポッド9216チップ、42.5 ExaFLOPS、TPU v5比10倍のピーク性能などの仕様の引用元。
+
+Google Antigravity 公式サイト / 開発者ブログ — https://antigravity.google/ / https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/ Gemini 3/3.1と組み合わさるエージェンティック開発プラットフォームの引用元。
+
+Gemini 公式サブスクリプションページ — https://gemini.google/subscriptions/ AI Plus(8ドル/月)、AI Pro(19.99ドル/月)、AI Ultra(249.99ドル/月、初回3ヶ月124.99ドル)の料金体系の引用元。
+
+予測市場 ―― Polymarket / Manifold
+Polymarket「Gemini 3.5 released by...?」 — https://polymarket.com/event/gemini-3pt5-released-by-june-30 Gemini 3.5のリリース時期予測市場。June 30までで20%、May 31までで8%、総取引ボリューム87.6万ドルの引用元。
+
+Polymarket「Google Gemini Parlay」 — https://polymarket.com/event/google-gemini-parlay Gemini 3.5とGemini 4.0の複合予測市場の引用元。
+
+Polymarket「Which company has the best AI model end of April?」 — https://polymarket.com/event/which-company-has-the-best-ai-model-end-of-april OpenAI 3%、Googleが大差をつけてリードという競合状況の引用元。
+
+Polymarket 全体「Gemini Predictions」「Gemini 3 Predictions」 — https://polymarket.com/predictions/gemini / https://polymarket.com/predictions/gemini-3 2026年4月17〜18日時点で109件のGemini関連市場、105件のGemini 3関連市場が稼働中であることの引用元。
+
+Manifold Markets「Gemini 4.0 (Google) release date」 — https://manifold.markets/Bayesian/gemini-40-google-release-date 6月までで8%、7月までで17%、8月までで29%、9月までで31%、10月までで35%という分布の引用元。
+
+Manifold Markets「Gemini 3.5 (any variation) released by January 16th」 — https://manifold.markets/JackOReganKenny/gemini-35-any-variation-released-by 2026年1月16日期限の初期予測市場。既にN/A解決済みであることの引用元。
+
+Manifold Markets「Gemini 3.2 (Google) release date」 — https://manifold.markets/Bayesian/gemini-32-google-release-date Gemini 3.1 Proの次のメジャーPro系リリース追跡市場の引用元。
+
+リーク・予想系メディア
+Julian Goldie SEO「Google Gemini 3.5: The Leaks, The Upgrades, and The Game Changers」 — https://juliangoldie.com/google-gemini-3-5/ 「Snow Bunny」コードネーム、DeepThink/Flashモード、Fierce Falcon/Ghost Falcon分業、3000行コード一発生成、2月2026リリース予想の引用元。
+
+Julian Goldie SEO「Google Gemini 3.5 Snow Bunny」 — https://juliangoldie.com/google-gemini-3-5-snow-bunny/ Snow Bunnyの具体的デモ、フルスタックアプリ生成、Deep Think推論モードの詳細の引用元。
+
+Julian Goldie SEO「Google Gemini 3.5 AI Leaks Update」 — https://juliangoldie.com/google-gemini-3-5-ai-leaks-update/ Fierce Falcon/Ghost Falconの役割分担の引用元。
+
+Geeky Gadgets「Gemini 3.5: Fierce Falcon vs Ghost Falcon」 — https://www.geeky-gadgets.com/gemini-3-5-fierce-falcon-vs-ghost-falcon/ LaMarina(LM Arena)でのFierce/Ghost Falconテスト、ゲーム作成、UI設計、コーディングシミュレーション、SVG生成の引用元。
+
+Daniel Norin「Gemini 3.5 the new AI monster soon to be unleashed」 — https://danielnorin.com/en/ai-en/ai-models/gemini-3-5-the-new-ai-monster-soon-to-be-unleashed Hieroglyph 80%、AIME 2025 100%、ScreenSpot Pro 72.7%などのリーク系ベンチマーク数値の引用元(本文で整合性難ありと注記)。
+
+Dinmay Brahma(Medium)「Gemini 3.5 Leaked: The Snowbunny Checkpoint That Built a Game Boy Emulator in One Shot」 — https://dinmaybrahma.medium.com/gemini-3-5-leaked-the-snowbunny-checkpoint-that-built-a-game-boy-emulator-in-one-shot-d1088919fb40 2026年1月22日付。Snowbunnyがフルスタック・ソフトウェア/メディアエンジンとして振る舞う事例、Misguided Attention 68.5%、Hieroglyph 80-88%の引用元。
+
+Greek Ai / GoPenAI「Gemini 3.5 Is a Game-Changer」 — https://blog.gopenai.com/gemini-3-5-is-a-game-changer-google-just-leveled-up-ai-and-its-not-just-another-chatbot-df7dfbc8d4b0 「2026年早期時点でGoogleは正式なGemini 3.5発表をしていない」「Snowbunny = 開発者コミュニティ内呼称」という注意喚起、Gemini 3変種/Pro DeepThink/Gemini 4前哨の3つの可能性分析の引用元。
+
+GhostFalcon.org — https://ghostfalcon.org/ Ghost FalconがGemini 3 Flash/Pro GAのチェックポイントである可能性、2025年12月発見、1501 Elo観測の引用元(Gemini 3.5説と対立する視点)。
+
+LeaveIt2AI「Gemini 3.2 Release Date, Leaks & What Google Hasn't Said Yet」 — https://leaveit2ai.com/ai-tools/language-model/google-gemini-3 Gemini 3.2についてのリーク追跡の引用元。
+
+技術系・分析系メディア
+VentureBeat「Google Gemini 3.1 Pro first impressions: a Deep Think Mini with adjustable」 — https://venturebeat.com/technology/google-gemini-3-1-pro-first-impressions-a-deep-think-mini-with-adjustable 3.1 Proのスリーティア・シンキング(Low/Medium/High)、Highは「Deep Think Mini」、ARC-AGI-2 31.1%→77.1%ジャンプなどの引用元。
+
+DataCamp「Gemini 3.1: Features, Benchmarks, Hands-On Tests, and More」 — https://www.datacamp.com/blog/gemini-3-1 3.1 Pro分析、Deep Thinkとの比較、Claudeとの対比の引用元。
+
+Zvi Mowshowitz(Substack)「Gemini 3.1 Pro Aces Benchmarks, I Suppose」 — https://thezvi.substack.com/p/gemini-31-pro-aces-benchmarks-i-suppose 3.1 Proのベンチマーク反応、「It's a Gemini model」というユーザー評価ニュアンスの引用元。
+
+Vellum AI「Flagship Model Report: GPT-5.1 vs Gemini 3 Pro vs Claude Opus 4.5」 — https://www.vellum.ai/blog/flagship-model-report Gemini 3 Pro、GPT-5.1、Claude Opus 4.5の比較の引用元。
+
+Vellum AI「Google Gemini 3 Benchmarks (Explained)」 — https://www.vellum.ai/blog/google-gemini-3-benchmarks LiveCodeBench Pro 2439 Eloなどの引用元。
+
+BenchLM.ai「GPT-5 vs Gemini in 2026: Full Benchmark Breakdown」 — https://benchlm.ai/blog/posts/gpt5-vs-gemini-2026 GPT-5.4が84点、Gemini 3.1 Proが83点という総合比較の引用元。
+
+BenchLM.ai「Gemini 3 Pro Deep Think Benchmarks 2026」 — https://benchlm.ai/models/gemini-3-pro-deep-think Deep Think版の87/100、ランク7位という引用元。
+
+LMCouncil.ai「AI Model Benchmarks Apr 2026」 — https://lmcouncil.ai/benchmarks 2026年4月時点のHumanity's Last Exam集計(Gemini 3 Pro Preview 37.52%、Claude Opus 4.6 34.44%、GPT-5 Pro 31.64%、GPT-5.2 27.80%)の引用元。
+
+GuruSup「ChatGPT vs Gemini (2026): We Tested Both」 — https://gurusup.com/blog/chatgpt-vs-gemini GPT-5.4 vs Gemini 3.1 Pro 実環境テスト比較の引用元。
+
+Introl「GPT-5.2 vs Gemini 3 Pro: 2026 Benchmark Comparison」 — https://introl.com/blog/gpt-5-2-vs-gemini-3-benchmark-comparison-2026 GPT-5.2 100% AIME、Gemini 3 Pro 1Mコンテキスト/Deep Thinkの比較の引用元。
+
+Alyvro「The Great AI Showdown of 2026: Gemini 3 vs. GPT-5 vs. Claude 3.5」 — https://alyvro.com/blog/the-great-ai-showdown-of-2026-gemini-3-vs-gpt-5-vs-claude-35 2025年末のパフォーマンス比較の引用元。
+
+Voxfor「Gemini 4: Google's Next AI Model Ecosystem」 — https://www.voxfor.com/gemini-4-google-next-ai-model-ecosystem/ Gemini 4の5つの柱(エージェント、World Model、拡張コンテキスト、永続メモリ、Ironwood TPU)、I/O 2026 5月19-20日開催確定の引用元。
+
+Tom's Guide「Google I/O 2026: Date, time, potential announcements」 — https://www.tomsguide.com/phones/google-pixel-phones/google-i-o-2026-date-time-potential-announcements-and-everything-else-you-need-to-know Google I/O 2026のキーノート内容予想(エージェンティック・コーディング、Geminiアップデート中心)の引用元。
+
+Engadget「What to expect from Google I/O 2026」 — https://www.engadget.com/ai/what-to-expect-from-google-io-2026-200252914.html I/O 2026で予想されるGeminiモデルアップデート、製品デモの引用元。
+
+Android Central「Google I/O 2026: How to watch and what you need to know」 — https://www.androidcentral.com/phones/google-pixel/google-io-2026-how-to-watch-what-you-need-to-know GeminiがI/O中心になるという予想の引用元。
+
+eWeek「Google's March 2026 AI Drop: Gemini Gets Personal, Proactive」 — https://www.eweek.com/news/google-march-2026-ai-drop-gemini-updates/ Personal Intelligence、会話検索、開発者ツールの引用元。
+
+SiliconAngle「DeepMind launches Gemini Robotics-ER 1.6」 — https://siliconangle.com/2026/04/15/deepmind-launches-gemini-robotics-er-1-6-meet-precise-physical-ai-demands/ 4月15日リリース報道の引用元。
+
+Yugatech「Google Gemini 3.2 Flash TTS launched」 — https://www.yugatech.com/software/google-gemini-3-2-flash-tts-launched/ 4月16日報道(記事本体では3.1 Flash TTSと記載)、70言語対応、オーディオタグ、SynthID透かしの引用元。
+
+Mean CEO Blog「Google Gemini News | April, 2026 (Startup Edition)」 — https://blog.mean.ceo/google-gemini-news-april-2026/ 4月のクロスプラットフォーム・インポート、Personal Intelligence無料化、メモリ機能の引用元。
+
+CurateClick / Almcorp / NXCode / Chatlyai / Lumichats 各種Gemini 3.1 Proガイド — https://curateclick.com/blog/gemini-3-1-pro-complete-guide-2026 / https://almcorp.com/blog/gemini-3-1-pro-complete-guide/ / https://www.nxcode.io/resources/news/gemini-3-1-pro-complete-guide-benchmarks-pricing-api-2026 / https://chatlyai.app/blog/gemini-3-1-pro-overview / https://lumichats.com/blog/gemini-3-1-pro-complete-review-2026-google-most-powerful-ai-1m-context-vs-gpt-54-claude 3.1 Proの77.1% ARC-AGI-2、80.6% SWE-Bench、$2/1Mトークン価格、GPT-5.4同点・PhDレベル科学リードの引用元。
+
+Metacto「Google Gemini API Pricing 2026」 / Finout「Gemini Pricing in 2026」 — https://www.metacto.com/blogs/the-true-cost-of-google-gemini-a-guide-to-api-pricing-and-integration / https://www.finout.io/blog/gemini-pricing-in-2026 Flash-Lite 0.10ドル/Mから3.1 Pro 4ドル/Mまでの価格帯、Pro $19.99/月、Ultra $124.99/3ヶ月プロモの引用元。
+
+TL;DL「LLM API Pricing 2026」 — https://www.tldl.io/resources/llm-api-pricing-2026 2026年4月時点のAPI価格総合比較の引用元。
+
+eesel.ai「Google AI Ultra explained: Features, pricing, and who it's for in 2026」 — https://www.eesel.ai/blog/google-ai-ultra Ultra $249.99/月の位置づけの引用元。
+
+Seeking Alpha「Google introduces new pricing tiers for Gemini based on inference usage」 — https://seekingalpha.com/news/4572373-google-introduces-new-pricing-tiers-for-gemini-based-on-inference-usage Flex/Priority/Batch/Caching各ティア構造の引用元。
+
+Demis Hassabis / 経営層発言
+Fortune「Demis Hassabis on chatbot wars, AI safety」 — https://fortune.com/2026/04/16/demis-hassabis-google-deepmind-chatbot-wars-ai-safety/ 2026年4月16日付。「コマーシャル競争よりもAGIを安全にゴールラインに通すことが重要」「DeepMindはロンドン拠点、グローバル視点が重要」という発言の引用元。
+
+Fortune「Google AI boss Demis Hassabis has 4-step plan to return tech giant to golden era」 — https://fortune.com/2026/02/11/google-ai-boss-demis-hassabis-4-step-plan-return-golden-era/ Hassabisの4ステップ戦略、Gemini競争力回復戦略の引用元。
+
+LinkedIn / Alex Kantrowitz「Google DeepMind CEO Demis Hassabis on AI's Next Breakthroughs」 — https://www.linkedin.com/pulse/google-deepmind-ceo-demis-hassabis-ais-next-what-agi-ai-kantrowitz-qryhe 「広告を2026年に導入する計画は現時点でない」発言の引用元。
+
+Times of India「Google DeepMind CEO Demis Hassabis」 — https://timesofindia.indiatimes.com/technology/tech-news/google-deepmind-ceo-demis-hassabis-google-combined-all-the-companys-resources-to-catch-up-with/articleshow/130157692.cms Gemini 2025年Q4末時点で月間アクティブユーザー7.5億人の引用元。
+
+eu.36kr「AI Godfather Demis Hassabis」 — https://eu.36kr.com/en/p/3710036449423745 ダボス・フォーラムでのAGI到達確率50%発言の引用元。
+
+Reddit / コミュニティ観測
+Reddit r/Bard「Something is coming. Gemini models are no longer marked as 'new'」 — https://www.reddit.com/r/Bard/comments/1skl372/something_is_coming_gemini_models_are_no_longer/ 「3.2 Proが4月末」「3.5はGoogle I/Oで落ちる」というコミュニティ観測の引用元。
+
+Reddit r/Bard「Gemini 3.5 date predictions」 — https://www.reddit.com/r/Bard/comments/1p0ma3q/gemini_35_date/ 3.5リリース予想議論の引用元。
+
+Reddit r/Bard「Sonnet 5 being released on Wednesday where is Gemini 3.5?」 — https://www.reddit.com/r/Bard/comments/1qtmi53/sonnet_5_being_release_on_wednesday_where_is/ 「3月末〜4月頭の.5系リリースパターン」議論の引用元。
+
+Reddit r/AISEOInsider「Google Gemini 3.5 Leaks Just Changed Everything」 — https://www.reddit.com/r/AISEOInsider/comments/1qt2dk0/google_gemini_35_leaks_just_changed_everything/ Fierce/Ghost Falcon、2026年1月末〜2月上旬リリース予想の引用元。
+
+Reddit r/AISEOInsider「Google Gemini 3.5 AI Leaks Update」 — https://www.reddit.com/r/AISEOInsider/comments/1qvp52a/google_gemini_35_ai_leaks_update_the_most/ Fierce/Ghost Falconの内部モデル観測の引用元。
+
+Reddit r/AISEOInsider「Gemini New Features 2026」 — https://www.reddit.com/r/AISEOInsider/comments/1r6d8o4/gemini_new_features_2026_the_update_that_quietly/ Gemini 2026新機能のコミュニティ議論の引用元。
+
+Reddit r/AISEOInsider「Google Gemini 3.5 Snow Bunny」 — https://www.reddit.com/r/AISEOInsider/comments/1qtcdue/google_gemini_35_snow_bunny_the_leak_thats/ Snow BunnyがGPT-5.2を上回るという観測の引用元。
+
+Reddit r/singularity「Gemini 3 Pro Vision benchmarks」 — https://www.reddit.com/r/singularity/comments/1pf6nd6/gemini_3_pro_vision_benchmarks_finally_compares/ MMMU Pro 81.0%(Gemini 3) vs GPT-5.1 76% vs Opus 4.5 72%の引用元。
+
+Reddit r/singularity「DeepMind releases FACTS Benchmark」 — https://www.reddit.com/r/singularity/comments/1pjekrk/deepmind_releases_facts_benchmark_gemini_3_pro/ FACTS Benchmark Gemini 3 Pro 68.8% vs GPT-5 61.8%の引用元。
+
+Reddit r/singularity「Gemini 3 Deep Think benchmarks」 — https://www.reddit.com/r/singularity/comments/1pec4zg/gemini_3_deep_think_benchmarks_released_hits_451/ Deep Think ARC-AGI-2 45.1%の引用元。
+
+Reddit r/singularity「Gemini 3.1 Pro benchmarks」 — https://www.reddit.com/r/singularity/comments/1r93abp/google_releases_gemini_31_pro_with_benchmarks/ Extended NYT Connections 98.4(3 Pro 96.3)などの引用元。
+
+Reddit r/singularity「Gemini 3 was trained 100% on TPUs」 — https://www.reddit.com/r/singularity/comments/1p1d32h/this_is_the_true_ai_moat_gemini_3_was_trained_100/ TPU v5比10倍ピーク性能、4倍パフォーマンス/ワットの引用元。
+
+Reddit r/ChatGPTPro「Gemini 3 is what gpt 5 should have been」 — https://www.reddit.com/r/ChatGPTPro/comments/1p0zisl/gemini_3_is_what_gpt_5_should_have_been_its/ GPT-5.1 extended thinking と Gemini 3 Pro thinking modeの比較の引用元。
+
+Reddit r/LocalLLaMA「Opus, Gemini and ChatGPT top models all disappeared from the Arena」 — https://www.reddit.com/r/LocalLLaMA/comments/1sg29tl/opus_gemini_and_chatpt_top_models_all_disappeared/ LM Arenaからトップモデル一時消失観測の引用元。
+
+Reddit r/GeminiAI「Can someone explain this discrepancy」 — https://www.reddit.com/r/GeminiAI/comments/1pn3jc6/can_someone_explain_this_discrepancy_googles/ Gemini 3 Pro 1501 Elo公式主張 vs 独立リーダーボード値の相違の引用元。
+
+Reddit r/GeminiAI「What major developments do you expect from Gemini in 2026」 — https://www.reddit.com/r/GeminiAI/comments/1q22wy2/what_major_developments_do_you_expect_from_gemini/ Gemini 2026コミュニティ期待の引用元。
+
+Reddit r/google_antigravity「Gemini set to 3.5 Pro in settings, but the response says it's 2.5 Pro」 — https://www.reddit.com/r/google_antigravity/comments/1rpr10y/gemini_set_to_35_pro_in_settings_but_the_response/ 内部モデル表示に関するユーザー観測の引用元。
+
+X(Twitter)投稿
+@mark_k「Google Gemini 3 models have been stealth released in LM Arena as 'OrionMist' and 'LithiumFlow'」 — https://x.com/mark_k/status/1979990463571509486 OrionMist/LithiumFlowがGemini 3 Proのステルス版であるという観測の引用元。
+
+@asteris_ai「Google announced the general availability of Gemini 3.5 Pro」 — https://x.com/asteris_ai/status/2029308963125088584 3M-tokenコンテキスト窓に関する観測の引用元(要検証情報として扱い)。
+
+@viktoroddy / @jerrod_lew ワンショットGame Boyエミュレータ / ワンショットウェブサイト生成投稿 — https://x.com/viktoroddy/status/1999158848372809809 / https://x.com/jerrod_lew/status/1991491903695581636 Snowbunny Game Boyエミュレータ事例の一次ソース。
+
+動画コンテンツ(YouTube)
+「Gemini 3.5? NEW Gemini Stealth Model Is POWERFUL & Fast」 — https://www.youtube.com/watch?v=1abLcL33eKA
+
+「Gemini 3.5 LEAKS: Google Tests New Models on LM Arena!」 — https://www.youtube.com/watch?v=t4FkYkKtO8w
+
+「NEW Google Gemini 3.5 Leaks Are INSANE!」 — https://www.youtube.com/watch?v=wdbT55zMLe8 / https://www.youtube.com/watch?v=Xygx-hgIkZw
+
+「Gemini 3.5 Explained: 2.1 Million Tokens」 — https://www.youtube.com/watch?v=j98kW6LN5vo 2.1Mトークン窓リーク予想の引用元。
+
+「Gemini 3.5 Testing: 3000 Lines of Code in One Prompt!」 — https://www.youtube.com/watch?v=w_DzuiFyBYE Snowbunny 3000行コード・88%スコアの引用元。
+
+「Google Gemini 3.5: The AI Upgrade That Changes Everything」 — https://www.youtube.com/watch?v=Qd67wF7vtko
+
+「GEMINI 4 + VEO 4: Google I/O 2026 Just Shocked Everyone」 — https://www.youtube.com/watch?v=AYiY-cmNSjk I/O 2026 Gemini 4・Veo 4 予想コンテンツの引用元。
+
+「Gemini 4 Isn't Real Yet… But This Changes Everything」 — https://www.youtube.com/watch?v=rEEoRnxiC74 Gemini 4ハイプの冷静分析の引用元。
+
+「Every Google Gemini 3.0 Pro Feature You'll NEED in 2026」 — https://www.youtube.com/watch?v=9Uv1ERS7y-I
+
+「How to Use Gemini 3 Pro in 2026: 10 Mind-Blowing Tricks Tested」 — https://www.youtube.com/watch?v=DX6F7X2Ncp0
+
+「BREAKING: NEW Secret Models on LMARENA!」 — https://www.youtube.com/watch?v=wGa8Z4JaqUM LithiumFlow/OrionMist観測の引用元。
+
+「How Gemini 3.1 Pro & Deep Think CRUSH every Benchmark」 — https://www.youtube.com/watch?v=5vvKx-wCIIk ARC-AGI-2 77.1%(Deep Think 85%)解説の引用元。
+
+公式ドキュメント補足
+Gemini API「Long context」 — https://ai.google.dev/gemini-api/docs/long-context 1M超コンテキストの公式解説の引用元。
+
+Gemini「Pro long context」 — https://gemini.google/overview/long-context/ 1Mトークン=1500ページ=30Kコード行の解説の引用元。
+
+Google DeepMind「Gemini 3」モデルページ — https://deepmind.google/models/gemini/ Gemini 3最新モデル説明の引用元。
+
+Google DeepMind「Gemini 3.1 Pro」モデルページ — https://deepmind.google/models/gemini/pro/ Gemini 3.1 Proの概要ページの引用元。
+
+Google DeepMind「Gemini 3 Flash」モデルページ — https://deepmind.google/models/gemini/flash/ Flash系の性能特性の引用元。
+
+Vertex AI Pricing — https://cloud.google.com/vertex-ai/generative-ai/pricing Vertex AI側の価格体系の引用元。
+
+Gemini API「Deprecations」 — https://ai.google.dev/gemini-api/docs/deprecations Gemini 3 Pro Preview(3月9日)、Robotics-ER 1.5(4月30日)などの廃止スケジュールの引用元。
+
+Gemini「Release notes」 — https://gemini.google/release-notes/ Gemini App消費者向けリリースノートの引用元。
+
+Wikipedia「Gemini (language model)」 — https://en.wikipedia.org/wiki/Gemini_(language_model) 歴代バージョン(1.0/1.5/2.0/2.5/3/3.1)の時系列整理の引用元。
+
+周辺情報
+Microcenter「This Week in AI: April 3, 2026」 — https://www.microcenter.com/site/mc-news/article/this-week-in-ai-april-3-2026.aspx Gemma 4ローンチ、Microsoft AI モデル、OpenAI資金調達などの週次ニュース集の引用元。
+
+Tom's Hardware「Google deploys new Axion CPUs and seventh-gen Ironwood TPU」 — https://www.tomshardware.com/tech-industry/artificial-intelligence/google-deploys-new-axion-cpus-and-seventh-gen-ironwood-tpu-training-and-inferencing-pods-beat-nvidia-gb300-and-shape-ai-hypercomputer-model 9216 AIアクセラレータ、42.5 FP8 ExaFLOPS、Nvidia GB300との比較の引用元。
+
+CloudOptimo「Google TPU Ironwood: Revolutionizing AI Inference at Scale」 — https://www.cloudoptimo.com/blog/google-tpu-ironwood-revolutionizing-ai-inference-at-scale/ Ironwood TPUポッド高密度クラスター構成の引用元。
+
+Sources.news「Demis Hassabis on what's next for Google DeepMind」 — https://sources.news/p/interview-demis-hassabis-sources 広告導入インタビュー発言の元記事の引用元。
+
+Sherwood News「Google to bring ads to Gemini chatbot in 2026」 — https://sherwood.news/tech/google-to-bring-ads-to-gemini-chatbot-in-2026/ 広告導入議論の外部論評の引用元。
+
+Facebook / GoogleCloud「Gemini 3 Pro tops the LMArena Leaderboard at 1501 Elo」 — https://www.facebook.com/googlecloud/posts/gemini-3-pro-tops-the-lmarena-leaderboard-at-1501-elo-for-builders-it-tops-the-w/1167905958820063/ WebDev Arena 1487 Elo、SWE-Bench 54.2%の引用元。
+
+News.aibase「Google Gemini 3 Quickly Tops LMArena Rankings」 — https://news.aibase.com/news/23002 GPT-5.1超え、Humanity Ultimate 37.5%の引用元。
+
+News.aibase「Google Gemini 3.5 Leak: Snow Bunny Can Generate 3000 Lines」 — https://news.aibase.com/news/25073 Snow Bunny 3000行生成の中国語圏メディア報道の引用元。
+
+RDWorld Online「How GPT-5.2 stacks up against Gemini 3.0 and Claude Opus 4.5」 — https://www.rdworldonline.com/how-gpt-5-2-stacks-up-against-gemini-3-0-and-claude-opus-4-5/ GPT-5.2 52.9-54.2% vs Opus 4.5 37.6% vs Gemini 3 Deep Think 45.1%の引用元。
+
+Ace Cloud「Claude Opus 4.5 Vs Gemini 3 Pro Vs Sonnet 4.5」 — https://acecloud.ai/blog/claude-opus-4-5-vs-gemini-3-pro-vs-sonnet-4-5/ Opus 4.5のSWE-Bench/Terminal Benchリードの引用元。
+
+LinkedIn (David Borish)「Google Releases Gemini 3: New Frontier Model Tops LMArena」 — https://www.linkedin.com/pulse/google-releases-gemini-3-new-frontier-model-tops-lmarena-david-borish-zb5pc Gemini 3 Pro 1501 Eloトップポジションの引用元。
+
+Thomas Wiegold Blog「Google Gemini 3 Hits #1 on LMArena」 — https://thomas-wiegold.com/blog/google-gemini-3-hits-1-on-lmarena/ 開発者のテスト所感の引用元。
+
+LinkedIn (Julian Goldie)「NEW Google Gemini 3.5 is INSANE」 — https://www.linkedin.com/posts/juliangoldieseo_new-google-gemini-35-is-insane-activity-7424464734680203264-uBu2 Snow Bunnyリーク拡散投稿の引用元。
+
+LinkedIn (Ashish Patel)「Gemini 3.5 Snow Bunny just leaked」 — https://www.linkedin.com/posts/ashishpatel2604_gemini-35-snow-bunny-just-leaked-and-claim-activity-7424153651855708160-LGQv 3000行生成拡散の引用元。
+
+LinkedIn (Bassey John)「Google Deprecates Gemini 3 Pro Preview March 9 2026」 — https://www.linkedin.com/posts/bassey-john-6a277885_ai-gemini-google-activity-7436651426698653696-Og23 3 Pro Preview廃止の引用元。
+
+Google Blog「New updates to the Gemini app, March 2026」 — https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/ Gemini Liveリアルタイム会話アップデートの引用元。
+
+Community.aifire.co「Gemini 3.5 Snowbunny Leaked」 — https://community.aifire.co/c/beginner-tutorials/gemini-3-5-snowbunny-leaked-3000-lines-of-code-emulators-in-one-prompt Snowbunny内部コード(DN9、D13)観測の引用元。
+
+Google Discuss「Migrate from Gemini 3 Pro Preview to Gemini 3.1 Pro Preview before March 9, 2026」 — https://discuss.ai.google.dev/t/migrate-from-gemini-3-pro-preview-to-gemini-3-1-pro-preview-before-march-9-2026/127062 公式移行アナウンスの引用元。
+
+Domain-b「Google updates Gemini safety features」 — https://www.domain-b.com/technology/artificial-intelligence/google-gemini-ai-safety-update-2026 Gemini安全機能アップデートの引用元。
+
+Opus.pro「Google I/O 2026: AI Video Generation & Gemini Updates」 — https://www.opus.pro/blog/google-io-2026-ai-video-generation-gemini-updates I/O 2026 AI動画生成予想の引用元。
+
+Blockchair / Phemex「Google DeepMind Unveils Gemini Robotics-ER 1.6」 — https://blockchair.com/news/google-deepmind-unveils-gemini-roboticser-16-with-advanced-spatial-ai--b6e8e2a191 / https://phemex.com/news/article/google-deepmind-unveils-gemini-roboticser-16-for-enhanced-robotic-autonomy-73234 Robotics-ER 1.6 の空間推論強化の引用元。
+
+Aitalkboard「When is the expected release date for Google Gemini 3.5?」 — https://www.aitalkboard.com/gemini-forum/when-is-the-expected-release-date-for-google-gemini-3-5-60287/ 3月2026リリース予想の引用元。
+
+Appreviewlab「Google Gemini 3 Pro Guide」 — https://appreviewlab.com/google-gemini-3-pro-guide/ Gemini 3 Pro 2025年11月ローンチ概要の引用元。
+
+Smithstephen「Gemini's Million-Token Promise? You Get 32,000」 — https://www.smithstephen.com/p/geminis-million-token-promise-you 実効コンテキスト批判の引用元。
+
+Till Freitag「AI Image Generation 2026」 — https://till-freitag.com/en/blog/ai-image-generation-models-2026 LM Arenaトップ9モデル117 Elo差という競合状況の引用元。
+
+以上、公式発表1次ソース、予測市場、技術分析メディア、リーク系ブログ、コミュニティ観測、動画コンテンツ、経営層インタビューという7層に分けて、計120件前後の参照元を列挙しました。本文で示した「高確度」の予測は主に公式ソース(1-9)と予測市場(10-16)、「中確度」の予測は技術メディア・官製ベンチマーク(26-49)、「低確度」の速報リーク系は主に17-25および75-86を背景としています。Demis Hassabis発言(50-54)は最新の戦略トーン判定に利用し、Reddit/X観測(55-74)は業界センチメントを測る用途で参照しました。

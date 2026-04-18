@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="第11章：Gemini 3.5の懐疑論とリスク。過熱したリークをどう読むか、Demis Hassabisの安全性メッセージ、スケーリング鈍化の時代。">
+<title>第11章：懐疑論とリスク | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>CHAPTER 11</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="../pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="../pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="../pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="../pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="../pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><a href="10-naming.html">第10章</a><span class="sep">›</span><span>第11章</span></nav>
+        <div class="article__chapter-num">CHAPTER 11</div>
+        <h1 class="article__title">懐疑論とリスク<br><span class="text-accent" style="font-size:.65em;">— 過熱した「リーク」をどう読むか</span></h1>
+
+        <p class="article__lead">
+            ここまで語ってきた内容の中には、正直言って<strong>「話半分」で受け止めるべきリーク情報</strong>がかなり含まれている。過熱したSEO系ブログの数字、チェリーピックのデモ、スケーリング鈍化のリスク、そしてDemis Hassabisの最新発言——冷静に整理しよう。
+        </p>
+
+        <div class="article__meta">
+            <span class="article__meta-item">📖 約 6 分</span>
+            <span class="article__meta-item">🎯 批判的検討</span>
+            <span class="article__meta-item">⚠ 要注意</span>
+        </div>
+
+        <div class="article__body">
+            <h2>怪しいベンチマーク数値</h2>
+
+            <p>例えばDaniel Norin氏のブログで紹介されている<strong>「Hieroglyph Benchmark 80%」「AIME 2025で100%」「ScreenSpot Proで72.7%」「SWE‑Bench Verifiedで76.2%」</strong>といった数字は、GPT‑5.1やClaude 4.5との比較軸が一貫していなかったり、一部はむしろ3.1 Proの実測値よりも低く、<em>整合性に難がある</em>。</p>
+
+            <div class="callout callout--caution">
+                <div class="callout__head"><span class="callout__icon">⚠</span>SEO目的のリークに注意</div>
+                <p>こうした「リーク」はSEO目的で<b>過去のGemini 3 Proの数字を書き直しただけ</b>の可能性が高い。特に「3.5」のキーワードで検索上位を狙う個人ブログは、一次ソースの数字と比較検証する癖を付けたい。</p>
+            </div>
+
+            <h2>チェリーピック的デモ</h2>
+
+            <p>また、「Snow Bunny」が3000行コードをワンショットで書いたという動画や、X（旧Twitter）上の<em>「ジェロド・ルー氏がGame Boyエミュレータをワンショット生成した」</em>という投稿は、個別の事例としては再現性があるものの、<strong>単発のチェリーピック的デモ</strong>である可能性も否定できない。</p>
+
+            <div class="pc-list pc-list--con">
+                <li>投稿者が1〜2回の試行から「一番きれいに動いた」フレームだけを選んでいる可能性</li>
+                <li>動画編集でエラーハンドリングが省略されている可能性</li>
+                <li>プロンプトに含まれている情報量が通常の倍以上あり、実質「テンプレート埋め込み」である可能性</li>
+                <li>Game Boyエミュレータはオープンソース実装が豊富で、LLMが「それらしいコード」をパッチワークしやすいタスク</li>
+            </div>
+
+            <p>Julian Goldie系、GoPenAI系、Geeky‑Gadgets系のリークブログは、それぞれAIアフィリエイトやコーチング講座への導線を持っているため、どうしても<strong>煽り気味の書き方</strong>になりがちだ。</p>
+
+            <h2>スケーリング効率の鈍化</h2>
+
+            <p>リスク面でもうひとつ重要なのは、Gemini 3.5が<strong>「期待ほど大きな差を付けられない」可能性</strong>である。ベースモデルの事前学習のスケーリング効率が鈍化しつつあるのは業界全体の共通認識で、各社がDeep Think系の長考と強化学習（RL）、ツール使用の最適化という<em>「ポスト事前学習」領域</em>で差別化しているのが現状だ。</p>
+
+            <p>Gemini 3.1 Proがすでにこの「ポスト事前学習」の成果物である以上、3.5が同じ方向性でさらに一段伸ばすのはそれなりに難しい。</p>
+
+            <div class="pull-quote">
+                もしI/Oで3.5が「3.1 Proに対する純粋な改善幅が5〜10ポイント程度」にとどまるとすれば、それは失望ではないものの、<b>「生成AIの物理限界が近づきつつある」</b>というナラティブを強めることになるだろう。
+                <cite>— 業界の共通認識</cite>
+            </div>
+
+            <h2>Demis Hassabisの最新メッセージ</h2>
+
+            <p>最後に、Demis Hassabis氏が2026年4月15日〜16日付のFortuneインタビューで語った内容も無視できない。</p>
+
+            <div class="callout callout--note">
+                <div class="callout__head"><span class="callout__icon">🎙</span>Hassabis @ Fortune 2026.04.16</div>
+                <p>
+                    「<em>コマーシャル競争よりも、AGIを人類のために安全にゴールラインに通すことのほうが重要だ</em>」と繰り返し強調。
+                </p>
+                <p>
+                    さらに「DeepMindはロンドン拠点で、グローバル視点が重要」とも発言しており、<b>西海岸のベイエリア中心主義</b>に対するある種のけん制とも読める。
+                </p>
+            </div>
+
+            <p>Gemini 3.5のリリースが<strong>派手なベンチマーク自慢よりも「責任ある展開」「グローバル視点」「安全性」を前面に押し出す</strong>ものになる可能性が高い。広告掲載については<em>「現時点で計画はない」</em>と明言しているため、3.5リリースと同時にGemini Appへ広告が導入されるという観測は、少なくとも2026年半ば時点では否定されたと見てよい。</p>
+
+            <h2>想定される失望シナリオ</h2>
+
+            <div class="scenario-grid">
+                <div class="scenario-card scenario-card--alt2">
+                    <span class="scenario-card__tag">失望 1</span>
+                    <h3 class="scenario-card__name">ベンチマーク改善が軽微</h3>
+                    <p class="scenario-card__body">
+                        3.1 Proに対し+5pt程度に収まる。市場は「生成AIの天井が見えた」と解釈し、株価や予測市場のパーレーが下落。
+                    </p>
+                </div>
+                <div class="scenario-card scenario-card--alt2">
+                    <span class="scenario-card__tag">失望 2</span>
+                    <h3 class="scenario-card__name">Deep Think のみUltra限定据え置き</h3>
+                    <p class="scenario-card__body">
+                        3.5 Proが「3.1 Proの小幅改善」でProプラン向け、Deep Think系の本格機能はUltra限定のまま。消費者には刺さらない。
+                    </p>
+                </div>
+                <div class="scenario-card scenario-card--alt2">
+                    <span class="scenario-card__tag">失望 3</span>
+                    <h3 class="scenario-card__name">プレビュー遅延</h3>
+                    <p class="scenario-card__body">
+                        I/Oでは「発表だけ」で実配布は7月以降。その間にOpus 5 / Sonnet 5が登場し、LMArena首位を奪われる。
+                    </p>
+                </div>
+            </div>
+
+            <h2>信頼可能性の物語</h2>
+
+            <p>Demis Hassabis氏の「AGI安全性重視」という最近のメッセージを踏まえると、I/Oのステージで披露されるのは派手な性能アピールだけではなく、<strong>「信頼可能性の物語」</strong>が同時に前景化するはずだ。</p>
+
+            <ul>
+                <li><b>3.5は長時間のエージェンティックタスクをどう安全に止めるか</b></li>
+                <li><b>世界観モデル（World Model）の前段としてどんな物理推論を組み込んだか</b></li>
+                <li><b>透かし・出所証明（SynthID、C2PA）をどこまで徹底したか</b></li>
+            </ul>
+
+            <p>逆に言えば、もしそうした物語が十分な重みを持って語られない場合、市場はそれをネガティブに受け取り、Polymarketの<em>「Google Gemini parlay」</em>のような複合市場の値付けが短期的に下がる可能性もある。</p>
+
+            <div class="confidence" data-conf="35">
+                <div class="confidence__head">
+                    <span class="confidence__label">⚠ 失望シナリオに振れる確率</span>
+                    <span class="confidence__pct">35%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--low"></div></div>
+            </div>
+
+            <div class="callout callout--success">
+                <div class="callout__head"><span class="callout__icon">✓</span>この章のまとめ</div>
+                <p>リーク情報は3重にフィルタリングすべし。SEO目的のブログは眉に唾、単発のデモはチェリーピックを疑う、そして「派手な数字」より「実効性能」と「安全性の物語」を見る。<b>Hassabisのトーンは「静かな進歩」寄り</b>であり、I/Oも派手さより信頼性を前景化する可能性が高い。</p>
+            </div>
+        </div>
+
+        <div class="chapter-nav">
+            <a class="chapter-nav__link chapter-nav__link--prev" href="10-naming.html">
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">← PREV</div><div class="chapter-nav__t">第10章：ネーミング戦略の謎</div></div>
+            </a>
+            <a class="chapter-nav__link chapter-nav__link--next" href="12-summary.html">
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">NEXT →</div><div class="chapter-nav__t">第12章：総合評価（結論）</div></div>
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="00-prologue.html">序章</a><a href="02-release.html">時期予想</a><a href="05-benchmarks.html">ベンチマーク</a><a href="12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="../pages/timeline.html">タイムライン</a><a href="../pages/lineup.html">モデル一覧</a><a href="../pages/glossary.html">用語集</a><a href="../pages/sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="../pages/about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="2026年4月18日時点で読み解くGoogle次世代AIモデル『Gemini 3.5（Snow Bunny）』の大予想。公開情報、リーク、予測市場、歴代パターンを徹底分析。">
+<title>Gemini 3.5 大予想 — 2026年4月18日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<nav class="top-nav">
+    <a href="index.html" class="top-nav__brand" aria-label="ホーム">
+        <span class="brand-icon" aria-hidden="true"></span>
+        <span class="brand-text">
+            <b>Gemini 3.5 大予想</b>
+            <span>2026.04.18 EDITION</span>
+        </span>
+    </a>
+    <button class="top-nav__btn" id="open-search" aria-label="検索を開く">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </button>
+    <button class="top-nav__btn" id="open-drawer" aria-label="メニューを開く">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+</nav>
+
+<!-- ============ READING PROGRESS ============ -->
+<div class="reading-progress" aria-hidden="true">
+    <div class="reading-progress__bar" id="reading-progress-bar"></div>
+</div>
+
+<!-- ============ DRAWER ============ -->
+<div class="drawer__overlay" id="drawer-overlay" aria-hidden="true"></div>
+<aside class="drawer" id="drawer" aria-label="サイトナビゲーション">
+    <div class="drawer__header">
+        <div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer" aria-label="閉じる">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+    </div>
+
+    <div class="drawer__section">
+        <div class="drawer__section-title">本編 / Main chapters</div>
+        <a class="drawer__link" href="index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="chapters/00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章：なぜ「3.5」を今語るのか</span></a>
+        <a class="drawer__link" href="chapters/01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">2026年4月の現在地</span></a>
+        <a class="drawer__link" href="chapters/02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">リリース時期予想</span></a>
+        <a class="drawer__link" href="chapters/03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunnyと2つの猛禽</span></a>
+        <a class="drawer__link" href="chapters/04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="chapters/05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク予想</span></a>
+        <a class="drawer__link" href="chapters/06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキストとマルチモーダル</span></a>
+        <a class="drawer__link" href="chapters/07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信戦略</span></a>
+        <a class="drawer__link" href="chapters/08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">三つ巴の競合状況</span></a>
+        <a class="drawer__link" href="chapters/09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU と垂直統合</span></a>
+        <a class="drawer__link" href="chapters/10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング戦略の謎</span></a>
+        <a class="drawer__link" href="chapters/11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">懐疑論とリスク</span></a>
+        <a class="drawer__link" href="chapters/12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価：本命シナリオ</span></a>
+    </div>
+
+    <div class="drawer__section">
+        <div class="drawer__section-title">付録 / Appendix</div>
+        <a class="drawer__link" href="pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデルラインナップ</span></a>
+        <a class="drawer__link" href="pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク・ダッシュボード</span></a>
+        <a class="drawer__link" href="pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">参照情報源一覧</span></a>
+        <a class="drawer__link" href="pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+
+<!-- ============ SEARCH PANEL ============ -->
+<div class="search-panel" id="search-panel" aria-hidden="true">
+    <div class="search-panel__head">
+        <input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索: Deep Think, Snow Bunny, HLE..." autocomplete="off">
+        <button class="search-panel__close" id="close-search">閉じる</button>
+    </div>
+    <div class="search-panel__results" id="search-results">
+        <div class="search-empty">キーワードを入力してください。<br><small>例: Deep Think / Snow Bunny / Ironwood / HLE</small></div>
+    </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+    <div class="container">
+        <div class="hero__eyebrow"><span class="dot"></span>GOOGLE I/O 2026 まであと約1ヶ月</div>
+        <h1 class="hero__title">
+            <span class="accent">Gemini 3.5</span><br>
+            大予想
+        </h1>
+        <p class="hero__subtitle">
+            2026年4月18日、「嵐の前の静けさ」の時点で読み解く、コード名<b style="color:var(--text-0)">Snow Bunny</b>――通称 <b style="color:var(--text-0)">Gemini 3.5</b> の全貌。公開情報・リーク・予測市場・歴代パターンを7層の視点から立体的に解剖します。
+        </p>
+
+        <div class="hero__meta">
+            <span class="hero__meta-chip">📅 <b>2026.04.18</b> 時点</span>
+            <span class="hero__meta-chip">🎯 I/O 2026 <b>5/19-20</b></span>
+            <span class="hero__meta-chip">📚 参照 <b>120+</b> 件</span>
+            <span class="hero__meta-chip">📑 本編 <b>12</b> 章</span>
+        </div>
+
+        <div class="hero__cta">
+            <a href="chapters/00-prologue.html" class="btn btn--primary">
+                序章から読み始める
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="chapters/12-summary.html" class="btn btn--secondary">結論（本命シナリオ）を先に読む</a>
+        </div>
+
+        <div class="key-stats">
+            <div class="key-stat">
+                <div class="key-stat__label">LMArena Elo</div>
+                <div class="key-stat__value">1501<span class="unit">+</span></div>
+                <div class="key-stat__hint">Gemini 3 Proの公式獲得値。3.5では1550〜1600を予想。</div>
+            </div>
+            <div class="key-stat">
+                <div class="key-stat__label">HLE 予想</div>
+                <div class="key-stat__value">48-52<span class="unit">%</span></div>
+                <div class="key-stat__hint">3.1 Proの44.4%から「45%の壁」を越える見通し。</div>
+            </div>
+            <div class="key-stat">
+                <div class="key-stat__label">Context</div>
+                <div class="key-stat__value">2M<span class="unit">tok</span></div>
+                <div class="key-stat__hint">デフォルト入力、Enterpriseでは3〜5Mプレビュー枠も。</div>
+            </div>
+            <div class="key-stat">
+                <div class="key-stat__label">Release 予想</div>
+                <div class="key-stat__value">5月<span class="unit">19-20</span></div>
+                <div class="key-stat__hint">Google I/O 2026キーノートでPreview同日配布。</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ INTRO MESSAGE ============ -->
+<section class="section">
+    <div class="container">
+        <div class="callout callout--info fade-in">
+            <div class="callout__head"><span class="callout__icon">📖</span>この予想の読み方</div>
+            <p>本文では予想を <b style="color:var(--accent-green)">高確度（公式・予測市場）</b>、<b style="color:var(--accent-gold)">中確度（技術メディア集計）</b>、<b style="color:var(--accent-red)">低確度（未検証リーク）</b> の3段階で明示しています。すべての予測には確信度バーが付与されているので、「どこまで堅いシナリオか／どこから妄想寄りか」を切り分けながら読み進めてください。</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CHAPTERS ============ -->
+<section class="section">
+    <div class="container">
+        <div class="section-head fade-in">
+            <div class="section-head__eyebrow">Table of Contents</div>
+            <h2 class="section-head__title">本編 12 章</h2>
+            <p class="section-head__desc">2026年4月18日時点での Gemini 3.5 考察を、序章から総合評価まで全12章に分けて収録。各章は独立して読めるよう構成されています。</p>
+        </div>
+
+        <div class="chapter-grid">
+            <a class="chapter-card fade-in" href="chapters/00-prologue.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">00</span>序章</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">なぜ「Gemini 3.5」を今語るのか</h3>
+                    <p class="chapter-card__excerpt">1501 Eloで王座を守るGoogle。コード名Snow Bunnyとして噂される「次の本命」の輪郭を描き始める。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag">導入</span>
+                        <span class="tag">Snow Bunny</span>
+                        <span class="tag">I/O 2026</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/01-current.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">01</span>現状</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">2026年4月の現在地</h3>
+                    <p class="chapter-card__excerpt">3.1 Proからスピンアウトする怒涛のFlash群、Lyria、Veo、Robotics‑ERの連続リリースを整理。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--high">高確度</span>
+                        <span class="tag">Flash/TTS</span>
+                        <span class="tag">Robotics‑ER</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/02-release.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">02</span>時期</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">リリース時期予想</h3>
+                    <p class="chapter-card__excerpt">半年周期の大バージョン、3ヶ月周期のマイナー。本命は5月19-20日のGoogle I/O。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--high">高確度</span>
+                        <span class="tag">Polymarket</span>
+                        <span class="tag">Manifold</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/03-codenames.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">03</span>名前</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">Snow Bunnyと2つの猛禽</h3>
+                    <p class="chapter-card__excerpt">Fierce Falcon vs Ghost Falcon——論理 vs 創造の役割分担か、はたまた全く別の正体か。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--mid">中確度</span>
+                        <span class="tag">コードネーム</span>
+                        <span class="tag">LMArena</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/04-features.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">04</span>機能</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">期待される機能</h3>
+                    <p class="chapter-card__excerpt">DeepThinkの標準搭載と、3000行級のコードを一ショットで生み出す「フルスタック創造機」の姿。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--high">高確度</span>
+                        <span class="tag">Deep Think</span>
+                        <span class="tag">Antigravity</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/05-benchmarks.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">05</span>数字</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">ベンチマーク予想</h3>
+                    <p class="chapter-card__excerpt">ARC-AGI-2、HLE、GPQA、SWE-Bench、LiveCodeBench Pro。3.1 Proからどこまで伸びるか？</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--mid">中確度</span>
+                        <span class="tag">HLE</span>
+                        <span class="tag">ARC-AGI-2</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/06-context.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">06</span>文脈</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">コンテキストとマルチモーダル</h3>
+                    <p class="chapter-card__excerpt">1Mの次は2M？ 3M？ 5M？ 容量よりも「実効コンテキスト」が真の勝負どころ。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--mid">中確度</span>
+                        <span class="tag">MRCR v2</span>
+                        <span class="tag">動画→コード</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/07-pricing.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">07</span>価格</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">価格・配信戦略</h3>
+                    <p class="chapter-card__excerpt">AI Pro $19.99/月、AI Ultra $249.99/月は据え置きか。配信面はGoogleのあらゆる面に。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--high">高確度</span>
+                        <span class="tag">AI Ultra</span>
+                        <span class="tag">Flex/Priority</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/08-competition.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">08</span>競合</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">三つ巴の競合状況</h3>
+                    <p class="chapter-card__excerpt">GPT-5.4、Claude Opus 4.6、Grok 5と渡り合うには？ 差別化の3点セット。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--mid">中確度</span>
+                        <span class="tag">GPT-5.4</span>
+                        <span class="tag">Claude Opus</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/09-infra.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">09</span>基盤</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">Ironwood TPUと垂直統合</h3>
+                    <p class="chapter-card__excerpt">9216チップ、42.5 ExaFLOPS。Nvidia非依存の「AI Hypercomputer」の全景。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--high">高確度</span>
+                        <span class="tag">Ironwood</span>
+                        <span class="tag">TPUv7</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/10-naming.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">10</span>命名</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">ネーミング戦略の謎</h3>
+                    <p class="chapter-card__excerpt">本当に「3.5」なのか？ それとも4.0直行？ 3つの対抗仮説を整理する。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--low">低確度</span>
+                        <span class="tag">3.2 Pro</span>
+                        <span class="tag">4.0</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/11-risks.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">11</span>リスク</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">懐疑論とリスク</h3>
+                    <p class="chapter-card__excerpt">過熱したリークをどう読むか。スケーリング鈍化時代と、Demis Hassabisの安全性メッセージ。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--low">要注意</span>
+                        <span class="tag">Hassabis</span>
+                        <span class="tag">安全性</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+
+            <a class="chapter-card fade-in" href="chapters/12-summary.html">
+                <div class="chapter-card__num"><span class="chapter-card__num-big">12</span>結論</div>
+                <div class="chapter-card__body">
+                    <h3 class="chapter-card__title">総合評価：本命シナリオ</h3>
+                    <p class="chapter-card__excerpt">すべての論点を集約した「2026年4月18日時点で最も整合的な予想」の全体像。</p>
+                    <div class="chapter-card__tags">
+                        <span class="tag tag--high">まとめ</span>
+                        <span class="tag">本命</span>
+                        <span class="tag">ロードマップ</span>
+                    </div>
+                </div>
+                <svg class="chapter-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ QUICK ACCESS ============ -->
+<section class="section section--alt">
+    <div class="container">
+        <div class="section-head fade-in">
+            <div class="section-head__eyebrow">Appendix</div>
+            <h2 class="section-head__title">付録ページ</h2>
+            <p class="section-head__desc">タイムラインやベンチマーク比較など、本文を横断する視覚的なサマリー。</p>
+        </div>
+
+        <div class="quick-grid">
+            <a class="quick-card fade-in" href="pages/timeline.html">
+                <div class="quick-card__icon">🕰️</div>
+                <div class="quick-card__title">リリース<br>タイムライン</div>
+                <p class="quick-card__desc">1.0から3.5予想までの全履歴を時系列で。</p>
+            </a>
+            <a class="quick-card fade-in" href="pages/lineup.html">
+                <div class="quick-card__icon">🧩</div>
+                <div class="quick-card__title">モデル<br>ラインナップ</div>
+                <p class="quick-card__desc">Pro/Flash/Lite/Live/TTS/Deep Think。</p>
+            </a>
+            <a class="quick-card fade-in" href="pages/benchmarks-dashboard.html">
+                <div class="quick-card__icon">📊</div>
+                <div class="quick-card__title">ベンチマーク<br>比較</div>
+                <p class="quick-card__desc">GPT-5.4 / Opus 4.6と数字で比較。</p>
+            </a>
+            <a class="quick-card fade-in" href="pages/glossary.html">
+                <div class="quick-card__icon">📖</div>
+                <div class="quick-card__title">用語集</div>
+                <p class="quick-card__desc">ARC-AGI-2、TPU、SynthIDなど30+用語。</p>
+            </a>
+            <a class="quick-card fade-in" href="pages/sources.html">
+                <div class="quick-card__icon">🔖</div>
+                <div class="quick-card__title">情報源<br>一覧</div>
+                <p class="quick-card__desc">7層120+件の参照元を全列挙。</p>
+            </a>
+            <a class="quick-card fade-in" href="pages/about.html">
+                <div class="quick-card__icon">ℹ️</div>
+                <div class="quick-card__title">この予想<br>について</div>
+                <p class="quick-card__desc">執筆方針、確信度のスケール、免責。</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HIGHLIGHT / TEASER ============ -->
+<section class="section">
+    <div class="container">
+        <div class="section-head fade-in">
+            <div class="section-head__eyebrow">Spotlight</div>
+            <h2 class="section-head__title">予想の核心を<br>3つのハイライトで</h2>
+        </div>
+
+        <div class="fact-highlight fade-in">
+            <div class="fact-highlight__big">5/19-20</div>
+            <div class="fact-highlight__label">Google I/O 2026 で発表</div>
+            <div class="fact-highlight__note">カリフォルニア州マウンテンビュー Shoreline Amphitheatre で開催確定。Polymarketは6月末までの公開確率を20%前後としているが、歴代リズムから見てI/Oでの看板掲出が最有力。</div>
+        </div>
+
+        <div class="fact-highlight fade-in">
+            <div class="fact-highlight__big">3000<span style="font-size:18px;vertical-align:middle;color:var(--text-2);"> 行</span></div>
+            <div class="fact-highlight__label">一ショットで書き切るコード量</div>
+            <div class="fact-highlight__note">Snow Bunnyチェックポイントで話題になった「Game Boyエミュレータ相当を単一プロンプトで生成」。3.5はフルスタックの設計書+実装+UIを同時に吐き出す「創造機」としての性格を強めると見られる。</div>
+        </div>
+
+        <div class="fact-highlight fade-in">
+            <div class="fact-highlight__big">2M<span style="font-size:18px;vertical-align:middle;color:var(--text-2);"> tok</span></div>
+            <div class="fact-highlight__label">デフォルト入力コンテキスト予想</div>
+            <div class="fact-highlight__note">1M → 2Mへの拡張が濃厚。ただし真の勝負は「MRCR v2の1M時に80%超を維持できるか」という実効コンテキストにある。Enterprise Ultra向けは3〜5Mプレビュー枠の可能性。</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section">
+    <div class="container">
+        <div class="data-card fade-in" style="background: linear-gradient(135deg, rgba(79,134,255,.12), rgba(178,125,255,.10));">
+            <div class="data-card__body" style="text-align:center;">
+                <h3 style="font-size:20px;margin:0 0 12px;color:var(--text-0);font-weight:800;">さあ、予想の世界へ。</h3>
+                <p style="color:var(--text-2);font-size:13.5px;line-height:1.75;margin:0 0 20px;">序章からゆっくり読み進めるのもよし、結論だけ先にさらうもよし。<br>12章の終わりで、Snow Bunnyの輪郭はきっと鮮明になっているはずです。</p>
+                <a class="btn btn--primary" href="chapters/00-prologue.html">序章を読む →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand">
+            <span class="brand-icon" aria-hidden="true"></span>
+            <div class="footer__brand-text">
+                <b>Gemini 3.5 大予想</b>
+                <span>2026.04.18 EDITION</span>
+            </div>
+        </div>
+        <div class="footer__links">
+            <div class="footer__col">
+                <h5>本編</h5>
+                <a href="chapters/00-prologue.html">序章</a>
+                <a href="chapters/02-release.html">時期予想</a>
+                <a href="chapters/05-benchmarks.html">ベンチマーク</a>
+                <a href="chapters/12-summary.html">結論</a>
+            </div>
+            <div class="footer__col">
+                <h5>付録</h5>
+                <a href="pages/timeline.html">タイムライン</a>
+                <a href="pages/lineup.html">モデル一覧</a>
+                <a href="pages/glossary.html">用語集</a>
+                <a href="pages/sources.html">情報源</a>
+            </div>
+            <div class="footer__col">
+                <h5>サイト</h5>
+                <a href="pages/about.html">この予想について</a>
+                <a href="index.html">トップに戻る</a>
+            </div>
+        </div>
+        <div class="footer__disclaimer">
+            <b>免責事項 ── </b>本サイトは2026年4月18日時点で入手可能な公開情報・リーク・予測市場・コミュニティ観測をもとにした<b>非公式の予想・分析</b>です。GoogleおよびGoogle DeepMindとは一切関係がなく、記載内容の正確性を保証するものではありません。実際のGemini 3.5の仕様・リリース時期・性能はGoogleの公式発表に従ってください。
+        </div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub — Independent Analysis</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="トップへ戻る">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="js/search-index.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

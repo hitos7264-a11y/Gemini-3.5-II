@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="Gemini 3.5関連用語集。Snow Bunny、Deep Think、Ironwood、ARC-AGI-2、HLE、SynthIDなど35+用語を網羅。">
+<title>用語集 | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>GLOSSARY</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="../chapters/00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="../chapters/01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="../chapters/02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="../chapters/03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="../chapters/04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="../chapters/05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../chapters/06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="../chapters/07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="../chapters/08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="../chapters/09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="../chapters/10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="../chapters/11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="../chapters/12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><span>用語集</span></nav>
+        <div class="article__chapter-num">APPENDIX · GLOSSARY</div>
+        <h1 class="article__title">用語集<br><span class="text-accent" style="font-size:.65em;">— Gemini 3.5関連キーワード</span></h1>
+
+        <p class="article__lead">
+            本サイトで頻出する略語・専門用語・コードネームを整理。アルファベット順／五十音順を混在させ、「すぐに引ける」設計にしています。
+        </p>
+
+        <div class="article__body">
+            <div class="glossary-index">
+                <a href="#section-a">A</a>
+                <a href="#section-b">B</a>
+                <a href="#section-c">C</a>
+                <a href="#section-d">D</a>
+                <a href="#section-e">E</a>
+                <a href="#section-f">F</a>
+                <a href="#section-g">G</a>
+                <a href="#section-h">H</a>
+                <a href="#section-i">I</a>
+                <a href="#section-l">L</a>
+                <a href="#section-m">M</a>
+                <a href="#section-n">N</a>
+                <a href="#section-p">P</a>
+                <a href="#section-r">R</a>
+                <a href="#section-s">S</a>
+                <a href="#section-t">T</a>
+                <a href="#section-v">V</a>
+            </div>
+
+            <!-- A -->
+            <section class="glossary-section" id="section-a">
+                <h2 class="glossary-section__letter">A</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Antigravity</div>
+                    <div class="glossary-entry__reading">アンチグラビティ</div>
+                    <div class="glossary-entry__def">Googleのエージェンティック開発プラットフォーム。コード生成・実行・デバッグを統合的に扱う。Gemini 3/3.1と深く結合しており、3.5世代では<code>Antigravity 2</code>がリリースされると予想される。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">ARC‑AGI‑2</div>
+                    <div class="glossary-entry__reading">アーク エージーアイ ツー</div>
+                    <div class="glossary-entry__def">François Cholletが提唱した抽象的一般知能ベンチマーク。パズル様の課題で<em>人間には直感的だがLLMが苦手</em>とされる。Gemini 3.1 Proは77.1%、3.5では82-85%が予想される。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Axion CPU</div>
+                    <div class="glossary-entry__reading">アクシオン</div>
+                    <div class="glossary-entry__def">Googleが開発するArm系の自社CPU。Ironwood TPUと組み合わせて<em>AI Hypercomputer</em>を構成する。</div>
+                </div>
+            </section>
+
+            <!-- B -->
+            <section class="glossary-section" id="section-b">
+                <h2 class="glossary-section__letter">B</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">BrowseComp</div>
+                    <div class="glossary-entry__reading">ブラウズコンプ</div>
+                    <div class="glossary-entry__def">ブラウザ操作を通じた情報収集・タスク実行を評価するエージェンティック検索ベンチマーク。Gemini 3.1 Proは85.9%で首位級。</div>
+                </div>
+            </section>
+
+            <!-- C -->
+            <section class="glossary-section" id="section-c">
+                <h2 class="glossary-section__letter">C</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">C2PA</div>
+                    <div class="glossary-entry__reading">シー ツー ピーエー</div>
+                    <div class="glossary-entry__def">Coalition for Content Provenance and Authenticityの略。コンテンツの<em>出所証明</em>標準。AI生成物にメタデータで制作情報を付与する業界標準。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Claude Opus 4.5 / 4.6</div>
+                    <div class="glossary-entry__reading">クロード オーパス</div>
+                    <div class="glossary-entry__def">AnthropicのフラッグシップLLM。コーディング系ベンチマーク（SWE-Bench、Terminal-Bench）で強く、Gemini 3.5の主要競合。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Context Window</div>
+                    <div class="glossary-entry__reading">コンテキストウィンドウ</div>
+                    <div class="glossary-entry__def">モデルが一度に処理できる最大トークン数。3.1 Proは入力1M/出力64K。3.5では入力2Mへの拡張が予想される。</div>
+                </div>
+            </section>
+
+            <!-- D -->
+            <section class="glossary-section" id="section-d">
+                <h2 class="glossary-section__letter">D</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Deep Think</div>
+                    <div class="glossary-entry__reading">ディープシンク</div>
+                    <div class="glossary-entry__def">Geminiの「じっくり考える」上位モード。数分〜数十分単位のチェーン思考を回し、ARC-AGI-2で45.1%などのスコアを出す。3.5では標準搭載が濃厚。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Demis Hassabis</div>
+                    <div class="glossary-entry__reading">デミス・ハサビス</div>
+                    <div class="glossary-entry__def">Google DeepMind CEO。2026年4月16日Fortuneインタビューで「商業競争よりAGI安全」を強調。3.5リリース時のトーン設定に大きく影響。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">DN9 / D13</div>
+                    <div class="glossary-entry__reading">ディーエヌナイン / ディーサーティーン</div>
+                    <div class="glossary-entry__def">Community.aifire.coで観測されたSnow Bunny関連の内部コード。Fierce/Ghost Falconとの関係は未確定。</div>
+                </div>
+            </section>
+
+            <!-- E -->
+            <section class="glossary-section" id="section-e">
+                <h2 class="glossary-section__letter">E</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Elo</div>
+                    <div class="glossary-entry__reading">イロ</div>
+                    <div class="glossary-entry__def">チェスなどの対戦レーティングシステム。LLM評価ではLMArenaで使われる。基準1000、フロンティアモデルは1400-1500、Gemini 3 Proは1501で史上初の四桁Elo超え。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Enterprise SKU</div>
+                    <div class="glossary-entry__reading">エンタープライズ SKU</div>
+                    <div class="glossary-entry__def">企業向け契約製品ライン。3.5では3-5Mコンテキストプレビュー枠などが提供されると予想される。</div>
+                </div>
+            </section>
+
+            <!-- F -->
+            <section class="glossary-section" id="section-f">
+                <h2 class="glossary-section__letter">F</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Fierce Falcon</div>
+                    <div class="glossary-entry__reading">フィアース ファルコン</div>
+                    <div class="glossary-entry__def">LM Arenaに現れた匿名モデル。<em>精密さ・論理・コーディング重視</em>と解釈される（Julian Goldie等の説）。Gemini 3.5の内部エキスパートの一人？</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Flash / Flash-Lite / Flash Live / Flash TTS</div>
+                    <div class="glossary-entry__reading">フラッシュ</div>
+                    <div class="glossary-entry__def">Geminiの軽量モデル系統。Flashは汎用、Liteはコスト最適化、Liveはリアルタイム音声、TTSは音声合成。3.5でも同じサブブランドが継承される見込み。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Flex / Priority</div>
+                    <div class="glossary-entry__reading">フレックス / プライオリティ</div>
+                    <div class="glossary-entry__def">2026年4月1日にAPIに導入された推論ティア。Flex=安価・遅延許容、Priority=優先・低遅延。Batch/Cachingとともに4ティア構造を形成。</div>
+                </div>
+            </section>
+
+            <!-- G -->
+            <section class="glossary-section" id="section-g">
+                <h2 class="glossary-section__letter">G</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Gemini Enterprise</div>
+                    <div class="glossary-entry__reading">ジェミニ エンタープライズ</div>
+                    <div class="glossary-entry__def">Google CloudのAI機能を企業向けに統合的に提供するプラットフォーム。Vertex AIと並ぶ配信チャネル。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Gemma 4</div>
+                    <div class="glossary-entry__reading">ジェンマ フォー</div>
+                    <div class="glossary-entry__def">Googleのオープンウェイトモデル。2026年4月2日に<code>26B-a4b-it</code>（MoE）と<code>31B-it</code>（密）が刷新公開。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Ghost Falcon</div>
+                    <div class="glossary-entry__reading">ゴースト ファルコン</div>
+                    <div class="glossary-entry__def">Fierce Falconと対になる匿名モデル。<em>創造性・ビジュアル・デザイン重視</em>と解釈される説と、<em>Gemini 3 Flash/Pro GAチェックポイント</em>説が対立。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">GPQA Diamond</div>
+                    <div class="glossary-entry__reading">ジーピーキューエー ダイヤモンド</div>
+                    <div class="glossary-entry__def">Google Proof Q&Aの難問サブセット。<em>博士レベルの科学</em>QA。Gemini 3.1 Proは94.3%で人間博士レベルに接近。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">GPT-5.2 / 5.4</div>
+                    <div class="glossary-entry__reading">ジーピーティー</div>
+                    <div class="glossary-entry__def">OpenAIのフラッグシップLLM。AIMEほぼ100%、BenchLM総合84点で首位級。Gemini 3.5の最大のライバル。</div>
+                </div>
+            </section>
+
+            <!-- H -->
+            <section class="glossary-section" id="section-h">
+                <h2 class="glossary-section__letter">H</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">HLE (Humanity's Last Exam)</div>
+                    <div class="glossary-entry__reading">エイチエルイー / ヒューマニティーズ ラスト エグザム</div>
+                    <div class="glossary-entry__def"><em>最難関の学術推論ベンチマーク</em>。2025年にセンセーショナルに登場した「人類最終試験」。Gemini 3.1 Pro 44.4%、3.5予想48-52%。</div>
+                </div>
+            </section>
+
+            <!-- I -->
+            <section class="glossary-section" id="section-i">
+                <h2 class="glossary-section__letter">I</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Ironwood TPU (TPUv7)</div>
+                    <div class="glossary-entry__reading">アイアンウッド ティーピーユー</div>
+                    <div class="glossary-entry__def">Googleの第7世代テンソル処理ユニット。<em>推論特化設計</em>。1ポッド9216チップ、42.5 ExaFLOPS(FP8)、TPU v5比10倍ピーク性能、4倍ワット性能。Gemini 3の100% TPU学習を支えた。</div>
+                </div>
+            </section>
+
+            <!-- L -->
+            <section class="glossary-section" id="section-l">
+                <h2 class="glossary-section__letter">L</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">LaMarina / LM Arena</div>
+                    <div class="glossary-entry__reading">ラマリナ / エルエム アリーナ</div>
+                    <div class="glossary-entry__def">匿名LLM同士がブラインドでバトルし、ユーザー投票でEloレーティングが決まるリーダーボード。Gemini 3 Pro、Snow Bunny、Fierce/Ghost Falconなどのステルステスト場。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">LiveCodeBench Pro</div>
+                    <div class="glossary-entry__reading">ライブコードベンチ プロ</div>
+                    <div class="glossary-entry__def">競技プログラミング形式のコードベンチマーク。Elo表示。Gemini 3.1 Proは2887 Eloで首位。3.5では3000 Elo超が予想される。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Lyria 3</div>
+                    <div class="glossary-entry__reading">リリア スリー</div>
+                    <div class="glossary-entry__def">Googleの音楽生成モデル。2026年3月25日にClip版とPro版がリリース。全出力にSynthID透かし。</div>
+                </div>
+            </section>
+
+            <!-- M -->
+            <section class="glossary-section" id="section-m">
+                <h2 class="glossary-section__letter">M</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">MCP Atlas</div>
+                    <div class="glossary-entry__reading">エムシーピー アトラス</div>
+                    <div class="glossary-entry__def">Model Context Protocolによる多段ツール連携ワークフローの評価ベンチマーク。3.5では75-80%が予想レンジ。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">MMMU-Pro</div>
+                    <div class="glossary-entry__reading">エムエムエムユー プロ</div>
+                    <div class="glossary-entry__def">Massive Multi-discipline Multimodal Understandingの難易度向上版。画像+テキストの多分野理解。Gemini 3 Proは81%でGPT-5.1(76%)/Opus 4.5(72%)を上回る。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">MoE (Mixture of Experts)</div>
+                    <div class="glossary-entry__reading">ミックスチャー オブ エキスパーツ</div>
+                    <div class="glossary-entry__def">複数の専門家ネットワークを持ち、入力に応じて一部のみを活性化するアーキテクチャ。Gemini 1.5以降の基盤設計。3.5ではタスク別エキスパートルーティングがさらに発展する見込み。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">MRCR v2</div>
+                    <div class="glossary-entry__reading">エムアールシーアール ブイツー</div>
+                    <div class="glossary-entry__def">長文読解・検索の実効コンテキストベンチマーク。Gemini 3.1 Proは128kで84.9%だが、1Mでは26.3%に落ちる。3.5の改善ポイント。</div>
+                </div>
+            </section>
+
+            <!-- N -->
+            <section class="glossary-section" id="section-n">
+                <h2 class="glossary-section__letter">N</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">NIAH (Needle in a Haystack)</div>
+                    <div class="glossary-entry__reading">ニードル イン ア ヘイスタック</div>
+                    <div class="glossary-entry__def">長文コンテキスト評価の古典手法。干し草の山（長文）の中から針（重要情報）を正確に取り出せるかをテスト。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">NotebookLM</div>
+                    <div class="glossary-entry__reading">ノートブックエルエム</div>
+                    <div class="glossary-entry__def">Googleの文書理解・ノート生成ツール。Geminiを搭載したRAG的体験。3.5世代でさらに強化される配信チャネルの一つ。</div>
+                </div>
+            </section>
+
+            <!-- P -->
+            <section class="glossary-section" id="section-p">
+                <h2 class="glossary-section__letter">P</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Personal Intelligence</div>
+                    <div class="glossary-entry__reading">パーソナル インテリジェンス</div>
+                    <div class="glossary-entry__def">Gemini AppがGmail、Calendar、Drive、YouTube、Maps等と連携する個人データ統合機能。2026年3月から無料開放。3.5時代はこの基盤の上でさらに深くユーザーに食い込む。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Polymarket / Manifold</div>
+                    <div class="glossary-entry__reading">ポリマーケット / マニフォールド</div>
+                    <div class="glossary-entry__def">予測市場プラットフォーム。Gemini 3.5リリース時期などを参加者がオッズ形式で取引する。Polymarketのボリュームが87万ドル超のGemini 3.5市場は流動性豊富。</div>
+                </div>
+            </section>
+
+            <!-- R -->
+            <section class="glossary-section" id="section-r">
+                <h2 class="glossary-section__letter">R</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Robotics-ER 1.6 / 2.0</div>
+                    <div class="glossary-entry__reading">ロボティクス イーアール</div>
+                    <div class="glossary-entry__def">Geminiの身体化推論(Embodied Reasoning)モデル。2026年4月14日に1.6へアップグレードし、<em>空間推論・多視点理解・計器読解</em>を強化。柔軟なthinking budgetパラメータが3.5本体と共通化される見込み。</div>
+                </div>
+            </section>
+
+            <!-- S -->
+            <section class="glossary-section" id="section-s">
+                <h2 class="glossary-section__letter">S</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Shoreline Amphitheatre</div>
+                    <div class="glossary-entry__reading">ショアライン アンフィシアター</div>
+                    <div class="glossary-entry__def">カリフォルニア州マウンテンビューの野外音楽堂。Google I/Oの開催地として定着。<em>2026年5月19-20日</em>にI/O 2026が開催される。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Snow Bunny / Snowbunny</div>
+                    <div class="glossary-entry__reading">スノーバニー</div>
+                    <div class="glossary-entry__def">Gemini 3.5の<em>初期チェックポイント</em>と目されるコードネーム。2025年12月〜2026年1月にGoogle AI Studioの内部パラメータやLM Arenaで観測。3000行コード一ショット生成などの伝説的デモを残した。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Sonnet 5 / Opus 5</div>
+                    <div class="glossary-entry__reading">ソネット / オーパス</div>
+                    <div class="glossary-entry__def">Anthropicの次世代Claude。2026年半ばに登場予想。Gemini 3.5との競合軸になる可能性。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">SynthID</div>
+                    <div class="glossary-entry__reading">シンスアイディー</div>
+                    <div class="glossary-entry__def">Google DeepMindが開発した<em>AI生成コンテンツへの透かし</em>技術。テキスト・画像・音声・動画すべてに適用可能。Lyria 3、Flash TTS、Veoなどの出力に標準埋め込み。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">SWE-Bench Verified</div>
+                    <div class="glossary-entry__reading">エスダブリューイー ベンチ</div>
+                    <div class="glossary-entry__def">実世界のOSSリポジトリバグ修正ベンチマークのうち、人手で検証された高信頼サブセット。Gemini 3.1 Pro 80.6%、Opus 4.6は82%付近と推定。</div>
+                </div>
+            </section>
+
+            <!-- T -->
+            <section class="glossary-section" id="section-t">
+                <h2 class="glossary-section__letter">T</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Terminal-Bench 2.0</div>
+                    <div class="glossary-entry__reading">ターミナルベンチ</div>
+                    <div class="glossary-entry__def">ターミナル（CLI）操作を通じた多段タスク遂行の評価ベンチマーク。Gemini 3.1 Pro 68.5%、Claude Opus 4.6が~70%。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Thinking Budget</div>
+                    <div class="glossary-entry__reading">シンキング バジェット</div>
+                    <div class="glossary-entry__def">モデルが1回の推論で消費する思考量（計算コスト）の予算。Robotics-ER 1.6で柔軟な設定が導入、3.5では本体と共通化される予想。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Three-Tier Thinking</div>
+                    <div class="glossary-entry__reading">スリーティア シンキング</div>
+                    <div class="glossary-entry__def">Low/Medium/Highの3段階で思考深度を切り替える仕組み。3.1 Proで採用。Highは実質「Deep Think Mini」。3.5ではこの段階がさらに上にシフトすると予想。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">TPU (Tensor Processing Unit)</div>
+                    <div class="glossary-entry__reading">ティーピーユー</div>
+                    <div class="glossary-entry__def">Google独自開発のAI専用プロセッサ。第7世代がIronwood。Nvidia GPU非依存のGemini学習・推論を支える。</div>
+                </div>
+            </section>
+
+            <!-- V -->
+            <section class="glossary-section" id="section-v">
+                <h2 class="glossary-section__letter">V</h2>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Veo 3.1 / Veo 4</div>
+                    <div class="glossary-entry__reading">ヴィオ</div>
+                    <div class="glossary-entry__def">Googleの動画生成モデル。Lite版含めエコシステムを形成。3.5世代ではVeo 4がリリース予想、長尺・音声付き生成対応。</div>
+                </div>
+                <div class="glossary-entry">
+                    <div class="glossary-entry__term">Vertex AI</div>
+                    <div class="glossary-entry__reading">バーテックス エーアイ</div>
+                    <div class="glossary-entry__def">Google CloudのML/AI統合プラットフォーム。Gemini APIと並ぶ企業向け配信チャネル。</div>
+                </div>
+            </section>
+
+            <h2>🔗 用語間の関係マップ</h2>
+
+            <div class="callout callout--note">
+                <div class="callout__head"><span class="callout__icon">🧩</span>全体像</div>
+                <p>
+                    <b>Gemini 3.5 Pro</b>（オーケストレーター） → <b>Fierce/Ghost Falcon</b>（内部エキスパート） → <b>Deep Think</b>（長考）<br>
+                    <b>Flash / Lite / Live / TTS</b>（サブモデル） + <b>Lyria 3 / Veo 4 / Robotics-ER 2.0</b>（周辺モデル）<br>
+                    <b>Antigravity 2</b>（開発環境） + <b>Personal Intelligence</b>（個人データ）<br>
+                    <b>Ironwood TPU + Axion CPU</b>（インフラ） = <b>AI Hypercomputer</b>
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="../chapters/00-prologue.html">序章</a><a href="../chapters/02-release.html">時期予想</a><a href="../chapters/12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="timeline.html">タイムライン</a><a href="lineup.html">モデル一覧</a><a href="glossary.html">用語集</a><a href="sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

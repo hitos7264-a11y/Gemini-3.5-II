@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="Gemini 3.5 想定モデルラインナップ。Pro/Flash/Lite/Live/TTS/Deep Thinkの6コアモデル + 周辺モデル群の詳細。">
+<title>モデルラインナップ | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>LINEUP</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="../chapters/00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="../chapters/01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="../chapters/02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="../chapters/03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="../chapters/04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="../chapters/05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../chapters/06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="../chapters/07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="../chapters/08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="../chapters/09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="../chapters/10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="../chapters/11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="../chapters/12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><span>モデルラインナップ</span></nav>
+        <div class="article__chapter-num">APPENDIX · LINEUP</div>
+        <h1 class="article__title">モデル<br><span class="text-accent">ラインナップ予想</span></h1>
+
+        <p class="article__lead">
+            Gemini 3.5登場時に同時または直後に揃うと予想される<strong>モデル一式</strong>。6つのコアモデルと、周辺のembedding/Veo/Lyria/Robotics/Antigravityまで。
+        </p>
+
+        <div class="article__body">
+            <h2>🎯 コアモデル 6種</h2>
+
+            <div class="lineup-grid">
+                <div class="lineup-card">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-pro-preview</div>
+                        <span class="lineup-card__badge lineup-card__badge--flagship">FLAGSHIP</span>
+                    </div>
+                    <p class="lineup-card__desc">フラッグシップモデル。Deep Think Low/Medium/High内蔵。HLE 48-52%、ARC-AGI-2 82-85%、LMArena 1550-1600 Elo帯を予想。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">入力</span><span class="lineup-spec__value">2M tok</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">出力</span><span class="lineup-spec__value">128K tok</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">API ($/M入)</span><span class="lineup-spec__value">$2 - $4</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">API ($/M出)</span><span class="lineup-spec__value">$12 - $18</span></div>
+                    </div>
+                </div>
+
+                <div class="lineup-card lineup-card--flash">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">FAST</span>
+                    </div>
+                    <p class="lineup-card__desc">中速・中コストの主力。一般的なチャット、要約、コード補助など。多くのユーザーが実際に触る「顔」。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">入力</span><span class="lineup-spec__value">1-2M tok</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">API ($/M入)</span><span class="lineup-spec__value">$0.30</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">レイテンシ</span><span class="lineup-spec__value">低〜中</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">用途</span><span class="lineup-spec__value">汎用</span></div>
+                    </div>
+                </div>
+
+                <div class="lineup-card lineup-card--lite">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash-lite</div>
+                        <span class="lineup-card__badge">CHEAP</span>
+                    </div>
+                    <p class="lineup-card__desc">コスト最適化モデル。大量のシンプルリクエストや埋め込み用途、バッチ処理向け。エッジでの採用例も増加予想。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">入力</span><span class="lineup-spec__value">1M tok</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">API ($/M入)</span><span class="lineup-spec__value">$0.10</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">レイテンシ</span><span class="lineup-spec__value">最速</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">用途</span><span class="lineup-spec__value">大量処理</span></div>
+                    </div>
+                </div>
+
+                <div class="lineup-card lineup-card--live">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash-live</div>
+                        <span class="lineup-card__badge">REALTIME</span>
+                    </div>
+                    <p class="lineup-card__desc">リアルタイム音声対話専用API。会話中の割り込み、感情表現、マルチスピーカー対応。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">形式</span><span class="lineup-spec__value">Live API</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">言語</span><span class="lineup-spec__value">多言語</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">用途</span><span class="lineup-spec__value">音声会話</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">遅延</span><span class="lineup-spec__value">&lt; 300ms</span></div>
+                    </div>
+                </div>
+
+                <div class="lineup-card lineup-card--tts">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash-tts</div>
+                        <span class="lineup-card__badge">VOICE</span>
+                    </div>
+                    <p class="lineup-card__desc">表現力豊かな音声合成。70+言語、オーディオタグで感情・ペース・アクセントを細かく制御。全出力SynthID透かし。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">言語</span><span class="lineup-spec__value">70+</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">透かし</span><span class="lineup-spec__value">SynthID</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">制御</span><span class="lineup-spec__value">タグ駆動</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">用途</span><span class="lineup-spec__value">TTS / 朗読</span></div>
+                    </div>
+                </div>
+
+                <div class="lineup-card lineup-card--deep">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-deep-think</div>
+                        <span class="lineup-card__badge lineup-card__badge--ultra">ULTRA</span>
+                    </div>
+                    <p class="lineup-card__desc">超長考専用モデル。AI Ultraプラン限定。数十分〜数時間単位のチェーン思考で最難関問題に挑む。ARC-AGI-2 90%超も視野。</p>
+                    <div class="lineup-card__specs">
+                        <div class="lineup-spec"><span class="lineup-spec__label">提供</span><span class="lineup-spec__value">Ultra限定</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">思考時間</span><span class="lineup-spec__value">数十分〜</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">用途</span><span class="lineup-spec__value">研究</span></div>
+                        <div class="lineup-spec"><span class="lineup-spec__label">ARC予想</span><span class="lineup-spec__value">90%+</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>🔧 周辺モデル・ツール</h2>
+
+            <div class="lineup-grid">
+                <div class="lineup-card lineup-card--lite">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-embedding-3</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">EMBED</span>
+                    </div>
+                    <p class="lineup-card__desc">埋め込みベクトルモデル。多言語RAG、セマンティック検索、レコメンドの基盤。</p>
+                </div>
+                <div class="lineup-card lineup-card--flash">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Veo 4</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">VIDEO</span>
+                    </div>
+                    <p class="lineup-card__desc">動画生成の次世代。長尺・音声付き・指示遵守性の向上。SynthID付き。</p>
+                </div>
+                <div class="lineup-card lineup-card--tts">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Lyria 3 Pro</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">MUSIC</span>
+                    </div>
+                    <p class="lineup-card__desc">音楽生成モデルのPro版。BGMから完奏曲まで、構成・楽器指定可。</p>
+                </div>
+                <div class="lineup-card lineup-card--deep">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Robotics-ER 2.0</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">ROBO</span>
+                    </div>
+                    <p class="lineup-card__desc">身体化推論モデル。3.5本体と同一思考予算APIで空間推論を統合。</p>
+                </div>
+                <div class="lineup-card lineup-card--live">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Antigravity 2</div>
+                        <span class="lineup-card__badge lineup-card__badge--new">AGENT</span>
+                    </div>
+                    <p class="lineup-card__desc">エージェンティック開発プラットフォーム刷新。3.5深連携でコーディング体験革新。</p>
+                </div>
+                <div class="lineup-card">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">Gemma 4+（開発中）</div>
+                        <span class="lineup-card__badge">OPEN</span>
+                    </div>
+                    <p class="lineup-card__desc">オープンウェイト版。26B-a4b-it / 31B-it から引き続き進化。</p>
+                </div>
+            </div>
+
+            <h2>📊 モデル比較表</h2>
+
+            <div class="cmp-table">
+                <div class="cmp-row cmp-row--head"><div class="cmp-label">モデル</div><div class="cmp-val">相対位置</div></div>
+                <div class="cmp-row"><div class="cmp-label">3.5 Pro</div><div class="cmp-val cmp-val--hi">★★★★★</div></div>
+                <div class="cmp-row"><div class="cmp-label">3.5 Deep Think</div><div class="cmp-val cmp-val--hi">★★★★★+</div></div>
+                <div class="cmp-row"><div class="cmp-label">3.5 Flash</div><div class="cmp-val">★★★★</div></div>
+                <div class="cmp-row"><div class="cmp-label">3.5 Flash-Lite</div><div class="cmp-val">★★★</div></div>
+                <div class="cmp-row"><div class="cmp-label">3.5 Flash Live</div><div class="cmp-val">★★★ (音声特化)</div></div>
+                <div class="cmp-row"><div class="cmp-label">3.5 Flash TTS</div><div class="cmp-val">★★★ (合成特化)</div></div>
+            </div>
+
+            <div class="section-link-row">
+                <a class="section-link" href="../chapters/04-features.html">
+                    <span class="section-link__icon">⚡</span>
+                    <span class="section-link__text">第4章：期待される機能の詳細</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="../chapters/07-pricing.html">
+                    <span class="section-link__icon">💳</span>
+                    <span class="section-link__text">第7章：価格・配信戦略</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="../chapters/00-prologue.html">序章</a><a href="../chapters/02-release.html">時期予想</a><a href="../chapters/12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="timeline.html">タイムライン</a><a href="lineup.html">モデル一覧</a><a href="glossary.html">用語集</a><a href="sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

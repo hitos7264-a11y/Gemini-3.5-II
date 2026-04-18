@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
+<meta name="description" content="第12章：総合評価。2026年4月18日時点で最も整合的なGemini 3.5の本命シナリオ、ラインナップ、ベンチマーク、機能の全貌。">
+<title>第12章：総合評価（本命シナリオ） | Gemini 3.5 大予想</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="../index.html" class="top-nav__brand"><span class="brand-icon"></span>
+    <span class="brand-text"><b>Gemini 3.5 大予想</b><span>CHAPTER 12 · FINAL</span></span></a>
+    <button class="top-nav__btn" id="open-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    <button class="top-nav__btn" id="open-drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+</nav>
+<div class="reading-progress"><div class="reading-progress__bar" id="reading-progress-bar"></div></div>
+<div class="drawer__overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+    <div class="drawer__header"><div class="drawer__title">目次 / Chapters</div>
+        <button class="drawer__close" id="close-drawer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="drawer__section"><div class="drawer__section-title">本編</div>
+        <a class="drawer__link" href="../index.html"><span class="drawer__link-num">◆</span><span class="drawer__link-text">トップ</span></a>
+        <a class="drawer__link" href="00-prologue.html"><span class="drawer__link-num">00</span><span class="drawer__link-text">序章</span></a>
+        <a class="drawer__link" href="01-current.html"><span class="drawer__link-num">01</span><span class="drawer__link-text">現在地</span></a>
+        <a class="drawer__link" href="02-release.html"><span class="drawer__link-num">02</span><span class="drawer__link-text">時期予想</span></a>
+        <a class="drawer__link" href="03-codenames.html"><span class="drawer__link-num">03</span><span class="drawer__link-text">Snow Bunny</span></a>
+        <a class="drawer__link" href="04-features.html"><span class="drawer__link-num">04</span><span class="drawer__link-text">期待される機能</span></a>
+        <a class="drawer__link" href="05-benchmarks.html"><span class="drawer__link-num">05</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="06-context.html"><span class="drawer__link-num">06</span><span class="drawer__link-text">コンテキスト</span></a>
+        <a class="drawer__link" href="07-pricing.html"><span class="drawer__link-num">07</span><span class="drawer__link-text">価格・配信</span></a>
+        <a class="drawer__link" href="08-competition.html"><span class="drawer__link-num">08</span><span class="drawer__link-text">競合状況</span></a>
+        <a class="drawer__link" href="09-infra.html"><span class="drawer__link-num">09</span><span class="drawer__link-text">Ironwood TPU</span></a>
+        <a class="drawer__link" href="10-naming.html"><span class="drawer__link-num">10</span><span class="drawer__link-text">ネーミング</span></a>
+        <a class="drawer__link" href="11-risks.html"><span class="drawer__link-num">11</span><span class="drawer__link-text">リスク</span></a>
+        <a class="drawer__link" href="12-summary.html"><span class="drawer__link-num">12</span><span class="drawer__link-text">総合評価</span></a>
+    </div>
+    <div class="drawer__section"><div class="drawer__section-title">付録</div>
+        <a class="drawer__link" href="../pages/timeline.html"><span class="drawer__link-num">T</span><span class="drawer__link-text">タイムライン</span></a>
+        <a class="drawer__link" href="../pages/lineup.html"><span class="drawer__link-num">L</span><span class="drawer__link-text">モデル一覧</span></a>
+        <a class="drawer__link" href="../pages/benchmarks-dashboard.html"><span class="drawer__link-num">B</span><span class="drawer__link-text">ベンチマーク</span></a>
+        <a class="drawer__link" href="../pages/glossary.html"><span class="drawer__link-num">G</span><span class="drawer__link-text">用語集</span></a>
+        <a class="drawer__link" href="../pages/sources.html"><span class="drawer__link-num">S</span><span class="drawer__link-text">情報源</span></a>
+        <a class="drawer__link" href="../pages/about.html"><span class="drawer__link-num">A</span><span class="drawer__link-text">この予想について</span></a>
+    </div>
+</aside>
+<div class="search-panel" id="search-panel">
+    <div class="search-panel__head"><input type="text" class="search-panel__input" id="search-input" placeholder="記事を検索..." autocomplete="off">
+    <button class="search-panel__close" id="close-search">閉じる</button></div>
+    <div class="search-panel__results" id="search-results"><div class="search-empty">キーワードを入力してください。</div></div>
+</div>
+
+<article class="article">
+    <div class="container">
+        <nav class="article__breadcrumb"><a href="../index.html">トップ</a><span class="sep">›</span><a href="11-risks.html">第11章</a><span class="sep">›</span><span>第12章</span></nav>
+        <div class="article__chapter-num">CHAPTER 12 · FINAL</div>
+        <h1 class="article__title">総合評価<br><span class="text-accent" style="font-size:.65em;">— 最も可能性が高い「本命シナリオ」</span></h1>
+
+        <p class="article__lead">
+            ここまでの論点を集約して、2026年4月18日時点で最も整合的な<strong>「Gemini 3.5 本命シナリオ」</strong>を提示する。時期、ラインナップ、機能、ベンチマーク、価格、配信、インフラ——すべてを一望する最終章。
+        </p>
+
+        <div class="article__meta">
+            <span class="article__meta-item">📖 約 8 分</span>
+            <span class="article__meta-item">🎯 結論</span>
+            <span class="article__meta-item">🏁 FINAL CHAPTER</span>
+        </div>
+
+        <div class="article__body">
+            <h2>時期：I/O 2026 → 夏の段階的ロールアウト</h2>
+
+            <p>まず、リリース時期は<strong>5月19日〜20日のGoogle I/O 2026</strong>におけるキーノートで発表され、Preview形態でGemini API、AI Studio、Antigravity、Vertex AI、Gemini App、NotebookLM、Android Studioなどに<em>同日配布</em>される。</p>
+
+            <div class="timeline">
+                <div class="timeline__item timeline__item--now">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__date">2026.04 末 〜 05 頭</div>
+                    <div class="timeline__title">「Gemini 3.2 Pro」ブリッジ投入（準備）</div>
+                    <div class="timeline__desc">3.5プレビュー移行への準備を整える。</div>
+                </div>
+                <div class="timeline__item timeline__item--future">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__date">2026.05.19 - 05.20</div>
+                    <div class="timeline__title">Google I/O 2026 で Gemini 3.5 Preview 発表</div>
+                    <div class="timeline__desc">同日にAPI・AI Studio・Vertex・Antigravity・Gemini Appに配布。</div>
+                </div>
+                <div class="timeline__item timeline__item--future">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__date">2026.06 末 〜 07 上旬</div>
+                    <div class="timeline__title">GA（General Availability）化</div>
+                    <div class="timeline__desc">本番ワークロード向けに安定化。価格・SLA明示。</div>
+                </div>
+                <div class="timeline__item timeline__item--future">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__date">2026.07 末 〜 08 頭</div>
+                    <div class="timeline__title">Deep Think Pro モードがフル解禁</div>
+                    <div class="timeline__desc">Ultra プラン向けの最上位Deep Thinkが本格稼働。</div>
+                </div>
+            </div>
+
+            <h2>モデルラインナップ</h2>
+
+            <p>モデルラインナップとしては、<strong>6つのコアモデル</strong>を軸に、周辺としてembedding・Veo・Lyria・Robotics‑ERが並ぶ。</p>
+
+            <div class="lineup-grid">
+                <div class="lineup-card">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-pro</div>
+                        <span class="lineup-card__badge lineup-card__badge--flagship">FLAGSHIP</span>
+                    </div>
+                    <p class="lineup-card__desc">フラッグシップ。Deep Think標準搭載のスリーティア・シンキング。</p>
+                </div>
+                <div class="lineup-card lineup-card--flash">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash</div>
+                        <span class="lineup-card__badge">FAST</span>
+                    </div>
+                    <p class="lineup-card__desc">中速・中コスト。一般用途の主力。</p>
+                </div>
+                <div class="lineup-card lineup-card--lite">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash-lite</div>
+                        <span class="lineup-card__badge">CHEAP</span>
+                    </div>
+                    <p class="lineup-card__desc">コスト最適化。大量リクエストに。</p>
+                </div>
+                <div class="lineup-card lineup-card--live">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash-live</div>
+                        <span class="lineup-card__badge">REALTIME</span>
+                    </div>
+                    <p class="lineup-card__desc">リアルタイム音声対話。会話割り込み対応。</p>
+                </div>
+                <div class="lineup-card lineup-card--tts">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-flash-tts</div>
+                        <span class="lineup-card__badge">VOICE</span>
+                    </div>
+                    <p class="lineup-card__desc">表現力豊かな音声合成。70+言語、オーディオタグ。</p>
+                </div>
+                <div class="lineup-card lineup-card--deep">
+                    <div class="lineup-card__header">
+                        <div class="lineup-card__name">gemini-3.5-deep-think</div>
+                        <span class="lineup-card__badge lineup-card__badge--ultra">ULTRA</span>
+                    </div>
+                    <p class="lineup-card__desc">超長考専用。Ultra限定、数十分単位のチェーン思考。</p>
+                </div>
+            </div>
+
+            <p>周辺として、<code>gemini-embedding-3</code>、<strong>Veo 4</strong>、<strong>Lyria 3 Pro</strong>、<strong>Robotics‑ER 2.0</strong>、<strong>Antigravity 2</strong> などがI/Oと同時または直後に並ぶ。</p>
+
+            <h2>機能面のコア</h2>
+
+            <div class="callout callout--success">
+                <div class="callout__head"><span class="callout__icon">✓</span>3.5 の主要機能</div>
+                <ul style="margin:6px 0 0;padding-left:20px;">
+                    <li><b>Deep Think 標準搭載</b>（現Highティアがデフォルト化）</li>
+                    <li><b>Fierce Falcon / Ghost Falcon に相当する内部エキスパートの協調推論</b></li>
+                    <li><b>一ショットで3000〜5000行のコード生成</b>（フルスタックアプリ）</li>
+                    <li><b>最大2Mトークン</b>のデフォルト・コンテキスト（Enterpriseは最大3M〜5M）</li>
+                    <li><b>動画入力からのコード生成</b>（ビデオ→アプリ）</li>
+                    <li><b>Robotics‑ERと同一APIで呼べる空間推論</b></li>
+                    <li><b>SynthID透かしの動画・音声・画像への全面適用</b></li>
+                    <li><b>Antigravity 2</b>との深い統合によるエージェンティック・コーディング</li>
+                </ul>
+            </div>
+
+            <h2>ベンチマーク射程</h2>
+
+            <div class="cmp-table">
+                <div class="cmp-row cmp-row--head"><div class="cmp-label">ベンチマーク</div><div class="cmp-val">3.5 予想レンジ</div></div>
+                <div class="cmp-row"><div class="cmp-label">ARC‑AGI‑2</div><div class="cmp-val cmp-val--hi">82〜85%</div></div>
+                <div class="cmp-row"><div class="cmp-label">Humanity's Last Exam</div><div class="cmp-val cmp-val--hi">48〜52%</div></div>
+                <div class="cmp-row"><div class="cmp-label">GPQA Diamond</div><div class="cmp-val cmp-val--hi">95〜96%</div></div>
+                <div class="cmp-row"><div class="cmp-label">SWE‑Bench Verified</div><div class="cmp-val cmp-val--hi">83〜85%</div></div>
+                <div class="cmp-row"><div class="cmp-label">Terminal‑Bench 2.0</div><div class="cmp-val cmp-val--hi">75% 前後</div></div>
+                <div class="cmp-row"><div class="cmp-label">MCP Atlas</div><div class="cmp-val cmp-val--hi">75〜80%</div></div>
+                <div class="cmp-row"><div class="cmp-label">BrowseComp</div><div class="cmp-val cmp-val--hi">90%+</div></div>
+                <div class="cmp-row"><div class="cmp-label">LiveCodeBench Pro</div><div class="cmp-val cmp-val--hi">3000+ Elo</div></div>
+                <div class="cmp-row"><div class="cmp-label">LMArena Elo</div><div class="cmp-val cmp-val--hi">1550〜1600</div></div>
+                <div class="cmp-row"><div class="cmp-label">MRCR v2 (1M)</div><div class="cmp-val cmp-val--hi">75〜80%</div></div>
+            </div>
+
+            <p>これらを束ねて、GPT‑5.4、Claude Opus 5/Sonnet 5、Grok 5をそれぞれのチャンピオン領域で上回る<strong>「総合首位」を再度確保</strong>する、というのがGoogleの目論見だろう。</p>
+
+            <h2>価格・配信・インフラ</h2>
+
+            <p>価格は <strong>AI Pro $19.99/月、AI Ultra $249.99/月</strong> のサブスクリプション体系を維持し、APIは3.1 Proと同等〜微増レンジ。企業向けのEnterprise SKUが3.5向けに刷新され、年間契約で大幅なボリュームディスカウントが提供される可能性が高い。</p>
+
+            <p>配信面ではGoogle Search、Chrome、Gmail、Workspace、Maps、Pixel、Androidに<em>一斉統合</em>され、Search Liveの利用可能地域は3月時点の200カ国超からさらに広がり、Personal Intelligenceも無料プランでのアクセス範囲を拡張する。</p>
+
+            <p>インフラ面では<strong>Ironwood TPUで学習・推論両方</strong>をまかない、Sunfish/Zebrafish系の補完により<em>「1ドルあたりの推論効率」で他社を引き離す</em>。</p>
+
+            <h2>Demis Hassabisのトーン</h2>
+
+            <p>最後に、Demis Hassabis氏の「AGI安全性重視」という最近のメッセージを踏まえると、I/Oのステージで披露されるのは派手な性能アピールだけではなく、<strong>「信頼可能性の物語」</strong>も同時に前景化するはずだ。</p>
+
+            <ul>
+                <li>3.5は長時間のエージェンティックタスクをどう<em>安全に止めるか</em></li>
+                <li>世界観モデル（World Model）の前段としてどんな<em>物理推論</em>を組み込んだか</li>
+                <li>透かし・出所証明（SynthID、C2PA）をどこまで徹底したか</li>
+            </ul>
+
+            <h2>総括</h2>
+
+            <div class="pull-quote">
+                Gemini 3.5は「Gemini 3からGemini 4への橋渡し」という立ち位置を超え、実質的に<b>Gemini 3世代の集大成</b>として、2026年5月のGoogle I/Oで大々的に登場する可能性が非常に高い。
+                <cite>— 本稿最終結論</cite>
+            </div>
+
+            <p>その姿は、単なる「賢いチャットボット」ではなく、<strong>DeepThinkで数分〜数十分単位の長考</strong>を回し、<em>Fierce Falcon的な論理エージェントとGhost Falcon的な創造エージェントを協調</em>させ、Veo・Lyria・Robotics‑ERを呼び分けながら、<strong>1〜2Mトークンの文脈を参照して「フルスタックのソフトウェア・メディア・現実空間」の全部を同時に作り変える</strong>、マルチエージェント統合型のオーケストレーターである。</p>
+
+            <p>2026年4月18日という「静かな直前」の時点で入手できる情報、予測市場のオッズ、直近のリリースパターン、そして競合他社の動きを総合すると、この予想はあらゆる方向に矛盾なく収まるシナリオだと言える。</p>
+
+            <h2>あとは5月19日の夜明けを待つ</h2>
+
+            <p>あとはGoogleが実際にI/Oのステージで<strong>何を語り、何を見せるか</strong>である。5月19日の夜明けまで、あと1ヶ月余り。</p>
+
+            <div class="fact-highlight">
+                <div class="fact-highlight__big">D-31</div>
+                <div class="fact-highlight__label">Google I/O 2026 までの日数（執筆時点）</div>
+                <div class="fact-highlight__note">「Snow Bunny」が「Gemini 3.5」として公式に名乗りを上げる瞬間を、業界全体が息をつめて待っている、というのが今の偽らざる空気だ。</div>
+            </div>
+
+            <div class="confidence" data-conf="68">
+                <div class="confidence__head">
+                    <span class="confidence__label">🎯 本命シナリオ総合の確信度</span>
+                    <span class="confidence__pct">68%</span>
+                </div>
+                <div class="confidence__track"><div class="confidence__fill confidence__fill--high"></div></div>
+            </div>
+
+            <div class="section-link-row">
+                <a class="section-link" href="../pages/timeline.html">
+                    <span class="section-link__icon">🕰️</span>
+                    <span class="section-link__text">ロードマップを時系列で確認</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="../pages/lineup.html">
+                    <span class="section-link__icon">🧩</span>
+                    <span class="section-link__text">モデルラインナップを一覧</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="../pages/sources.html">
+                    <span class="section-link__icon">🔖</span>
+                    <span class="section-link__text">参照情報源を全列挙</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+                <a class="section-link" href="../index.html">
+                    <span class="section-link__icon">◆</span>
+                    <span class="section-link__text">トップページに戻る</span>
+                    <svg class="section-link__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="chapter-nav">
+            <a class="chapter-nav__link chapter-nav__link--prev" href="11-risks.html">
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">← PREV</div><div class="chapter-nav__t">第11章：懐疑論とリスク</div></div>
+            </a>
+            <a class="chapter-nav__link chapter-nav__link--next" href="../pages/about.html">
+                <div class="chapter-nav__body"><div class="chapter-nav__dir">APPENDIX →</div><div class="chapter-nav__t">この予想について</div></div>
+                <svg class="chapter-nav__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__brand"><span class="brand-icon"></span><div class="footer__brand-text"><b>Gemini 3.5 大予想</b><span>2026.04.18 EDITION</span></div></div>
+        <div class="footer__links">
+            <div class="footer__col"><h5>本編</h5><a href="00-prologue.html">序章</a><a href="02-release.html">時期予想</a><a href="05-benchmarks.html">ベンチマーク</a><a href="12-summary.html">結論</a></div>
+            <div class="footer__col"><h5>付録</h5><a href="../pages/timeline.html">タイムライン</a><a href="../pages/lineup.html">モデル一覧</a><a href="../pages/glossary.html">用語集</a><a href="../pages/sources.html">情報源</a></div>
+            <div class="footer__col"><h5>サイト</h5><a href="../pages/about.html">この予想について</a><a href="../index.html">トップに戻る</a></div>
+        </div>
+        <div class="footer__disclaimer"><b>免責事項 ── </b>本サイトは2026年4月18日時点の公開情報・リーク・予測市場に基づく<b>非公式の予想</b>です。</div>
+        <div class="footer__copy">© 2026 Gemini 3.5 Speculation Hub</div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script src="../js/search-index.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
